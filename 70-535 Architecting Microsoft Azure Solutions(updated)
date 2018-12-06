@@ -1,0 +1,45 @@
+https://www.microsoft.com/handsonlabs/selfpacedlabs
+https://azurecitadel.github.io/labs/
+https://handsonlabs.microsoft.com/handsonlabs/
+
+Virtual Machines
+Introduction to virtual machines
+Availability Sets
+	Availability :What percentage of the time will your application be accessiable ?
+	Fault Domains 
+		unexpected hardware failure
+	Update Domains
+		planned updates to Azure
+Web Apps containers
+	5 ways we can run applications
+	1.Virtual Machines
+		Customapp + dependencies installed separately
+	2.App Services
+		Give your code to Azure to run
+	3.Web Apps for containers
+		Custom app+Dependencies packaged together
+		Fully Managed 
+		AutoScaling
+		Easy Continuous Integration /Continuous Deployment
+			a)Docker Hub
+			b)GitHub
+			c)Azure Container Registry
+	4.Serverless
+	5.Microservices
+Virtual Machine Scale Sets(VMSS)
+	1.Create Virtual machine took us 8 minutes
+	2.How do you create 100 identical virtual machines?
+	3.And How do you scale up and down those virtual machines to add
+	  more or reduce the number?
+	4.VMSS	
+		a)Create and Manage a group of identical,load balanced VMs
+		b)you can define a schedule for them to scale
+		c)Or have it triggered based on demand
+ 	5.VMSS Limitations
+		a)Up to 1000 VM instances if you use a marketplace image
+		b)Up to 300 VM instances if you want to provide your own vm image
+	6.Difference between VM and VMSS
+		a)Manually create additional VMs as reuired
+		b)Manually create load balancer or application gateway
+		c)Manually create availability set and use availability zones
+		d)Manually monitor performance and execute steps for scaling

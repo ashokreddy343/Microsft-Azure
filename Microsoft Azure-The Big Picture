@@ -1,0 +1,71 @@
+What is	 a Cloud ?
+		IaaS
+		PaaS	
+		SaaS
+	Cloud Computing
+		1.Reduced time and cost to provision
+		2.Increased flexibility in scale and deployment
+		3.Lower overall TCO
+		4.New solutions possible
+	Microsoft Azure:Compute
+		Computing -Resources to Run your Code
+			CPU
+			Memory
+			Disk space
+			Foundation for all of Azure
+		Azure Compute Options
+			compute is about running your code
+			virtual machines(IaaS)
+				Linux or Windows
+				Prebuilt images
+				Varying sizes
+				Premium Storage
+				You manage the operating system
+			containers(IaaS)
+				Lightweight application hosts
+				Chain images together
+				Linux now with windows on the way 
+				Docket client support on windows
+			cloud services(PaaS)
+				Web/Worker Roles
+				Package application code
+				Declared target operating system
+				Azure Service Fabric managed
+			web apps(PaaS)
+				web application code
+				IIS hosting at scale
+				Source controle integration for CI
+				web jobs for background processing
+			Azure App Services
+				Web apps
+				API Apps
+				Mobile Apps
+				Logic Apps
+			Containers and micro services
+				For complex systems
+				Highly automatable
+	
+	Microsoft Azure:Data Storage
+		Data
+			Data is expanding at a rapid pace
+			Various types and uses of data
+			Storage at global scale
+			Many processing options
+		Types of Data Storage
+			1.Relational
+			2.Key/Value
+			3.Blob
+			4.Document
+			5.Graph
+			6.Column
+		Microsoft Azure PaaS Data Storage
+			1.Azure SQL Database/MySQL
+			2.Storage Tables/Redis
+			3.Storage Blobs/File Services
+			4.DocumentDB RavenHQ Mongo
+		Microsoft Azure IaaS Data Storage
+		Data Lakes
+			Massively scalable storage
+			Store data in native formats
+			HDFS compatible
+			High throughput

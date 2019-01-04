@@ -1,0 +1,497 @@
+1.Microsoft Azure for Developers: What to Use When			
+https://azure-overview.com/
+https://github.com/bmaluijb
+https://github.com/bmaluijb/azure-what-to-use-when
+What to Use for Running your Applications in Azure ?
+	1.VM	2.Container Instances	3.Batch		4.Cloud Services	5.Mobile App
+	6.Logic App	7.Container Service	8.Web App for Containers 9.Service Fabric
+	10.Web App	11.Function App
+	Azure Virtual Machines
+		1.Virtual Machine-as-a-service
+		2.starts and stops in minutes
+		3.Many images to choose from
+			-import your own image
+			-Option to bring your own license
+		4.Many sizes to choose from
+			-General purpose
+			-CPU
+		5.Configuration options
+			-Auto shutdown,Disks,Networking
+		6.SLA 99.95%(if you run multiple instances)
+	Azure Container Service
+		1.Runs multiple containers
+		2.Containers start and stop in seconds
+		3.Comes with a container orchestrator
+			-DC/OS
+			-Kubernetes
+			-Swarm
+		4.Runs Linux and Windows containers
+		5.Use images from
+			-Docker Hub or
+			-Azure Container Registry
+				Get from somewhere or create your own
+	Azure Container Instances
+		1.Runs single containers
+		2.Starts and stops in seconds
+		3.No container orchestrator needed
+			-Can work with orechestrators
+		4.Runs Linux and Windows containers
+		5.Use images from 
+			-Docker Hub or
+			-Azure Container Registry
+				Get from somewhere or created your own
+	Azure Web App for Containers
+		1.Runs a container on App Services
+		2.Container starts and stops in seconds
+		3.No orchestrator needed
+		4.Run Linux Containers
+		5.Use App Service features
+			-Easy Continuous Deployment
+			-Deployment slots
+			-(automatic) Scaling
+		6.Use images from
+			-Docker Hub or
+			-Azure Container Registry
+				-Get from somewher or create your own
+	Azure Batch
+		1.Runs your job across many virtual machines
+		2.Orchestrates running your job
+			-scaling across machines
+			-Stages data for your job
+			-Create job pipelines with tasks
+		3.Runs your job on Windows or Linux
+		4.Can run containers
+	Azure Service Fabric
+		1.Runs your applications relibly and resilient
+		2.Orchestrates running your app
+			a)Keeps it available
+			b)Keeps it performant by scaling
+			c)Performs rolling upgrades
+		3.Can run
+			a)Any executable
+			b)Reliable services(that persist state)
+			c)Actor-based applications
+			d)And orchestrate containers
+		4.Runs in the cloud and on-premises
+		5.Production application requires 5 VMs
+	Azure Cloud Services
+		1.Runs your app in VMs as web or Worker roles
+		2.Absract the VM so that you don't have to deal with it
+			-Provide scaling
+		3.you package your app and deploy it
+			-To run as an HTTP-based application,or 
+			-To run as a background job
+		4.Enables you to have some control over the VM 
+			-RDP into the VMs
+	Azure App Services Web App
+		1.Runs your app in a webserver-as-a-service
+		2..NET,Java,PHP,Node.js and Python
+		3.App service features
+			-Continuous Deployment
+			-Custom Domains
+			-Deployment Slots
+			-(Automatic)Scaling
+			-Authentication/Authorization
+			-WebJobs
+			-Hybrid connections to on-premise resources
+		4.SLA 99.95%
+	Azure App Services WebJob
+		1.Runs your background task in App Services
+		2.Runs inside your App Service
+			-Consumes resources
+			-Is dependent on your App Service
+		3.Can be triggered
+			-On a schedule 
+			-By outside resources
+				.New message on a queue
+	Azure App Services Mobile App
+		1.Runs your app as a backend for mobile clients
+		2..net,node.js
+		3.Mobile clients connect with the SDK
+			-IOS,Android,Windows,Xamarin(Forms)
+		4.Unique features
+			-Offline sync
+			-Push notifications
+		5.All of the App Service features
+			-Deployment Slots
+			-(Automatic) Scaling
+		6.SLA 99.95%
+	Azure App Services-Function App
+		1.Executes small pieces of code
+		2.Can be triggered
+			-On a schedule
+			-By an outside resource
+				.WebHook
+				.New message in a queue
+		3.Have bindings
+			-Incoming Azure Blob value
+			-Outgoing Azure Storage Queue Message
+		4.All of the App service features
+		5.Can run in consumption mode(serverless)
+			-Pay only for their execution
+			-Scale automatically
+	Logic Apps
+		1.Execute a pipeline of tasks in a process
+		2.Replacement for BizTalk Services
+		3.Can be triggered
+			-On a schedule
+			-By an outside resource
+				.webhook
+				.New message in a queue
+		4.Call connectors in steps
+			-Countless connectors to resources
+			 	.office365,twitter,sendgrid,your own APIs
+		5.Only runs in consumption mode(serverless)
+			-scales automatically
+	VM,Container Instances,Batch,Container Service,WebApp for Containers,service fabric
+		1.Full control & responsibility
+		2.Stay vendor agnostic(run anywhere)
+	Batch,Cloud Service,Mobile App,Service Fabric,Web app
+		1.Azure Manages your app
+		2.you manage scaling and configuration
+		3.Be able to RDP into a VM
+	Batch,Cloud Service,Service Fabric
+		1.Azure Manages your app
+		2.you manage scaling and configuration
+		3.Be able to RDP into a VM
+	Logic App,Function app
+		1.Azure manges your app,including scaling
+		2.you manage configuration
+	Comparing Container Options and VMs
+		VM
+			1.Lift-and shift your app to the cloud
+			2.Simple apps(without orchestrator)
+		Container Instances
+			1.Simple apps(without orchestrator)
+		Container Service
+			1.Complex apps(with orchestrator)
+		Web app for containers
+			1.Run Web app on Linux with app service features
+		Batch
+			1.Repetitive jobs(on massive scale)
+		Service Fabric
+			1.Complex apps(with orchestrator)
+			2.Run orchestrated microservices
+			3.Run anywhere
+	Where to Run Your Background Tasks ?
+		Cloud Services
+			1.Short-running tasks
+			2.Long-running tasks
+			3.Pay all month
+			4.Need to deploy a complete app to run
+		WebJob
+			1.Short-running tasks
+			2.Long-running tasks
+			3.Pay all month
+			4.Can deploy only the code necessary to run
+		Functions
+			1.Short-running tasks
+			2.Long-running tasks
+			3.Pay only for what and when you run
+			4.Can deploy only the code necessary to run
+		Batch
+			1.Short-running tasks
+			2.Long-running tasks
+			3.Resource intensive tasks
+			4.Need to deploy a complete app to run
+	Where to Run Your Applications ?
+		Web App
+			1.Host web applications
+			2.Host your own APIs
+			3.Enjoy features like deployment slots,auth
+		Mobile App
+			1.Host backend for mobile apps
+			2.Enjoy features like deployment slots,auth
+		Cloud Services
+			1.Host web applications
+			2.Host your own APIs
+			3.Enjoy features like deployment slots,auth
+		Service Fabric
+			1.Host web applications
+			2.Host your own APIs
+			3.Run(micro) services at massive scale
+		Functions
+			1.Host your own APIs
+			2.Automate one step of a process
+			3.Enjoy features like deployment slots,auth
+			4.Run(micro) services at massive scale
+		Logic App
+			1.Automate a complete process
+	What to use to Secure your Applications in Azure ?
+	Option for Securing Your Application in Azure
+		Azure Active Directory
+			1.Secure your applications
+			2.Identity Provider-as-a-service
+			3.Stores Identities
+			4.Authentication & Authorization
+			5.Integrates with on-premises IDPs
+			6.Protect applications
+				-In the cloud
+				-On premises
+			7.Advanced features
+				-Multi-factor authentication
+				-Advanced threat detection
+		Azure Key Vault
+			1.Provides key-and secret management
+			2.Stores and encrypts
+				-Keys(encryption,certificates)
+				-Secrets(passwords,connection strings)
+			3.Read and write secrets using API or SDK
+			4.Enables developers to not know secrets
+				-keeps secrets out of source code
+			5.Provides logging
+				-On all operations on a secret
+		Azure App service certificate
+			1.Provides an easy way to use TLS certificates
+			2.Buy certificate straight from Azre
+				-Uses Godaddy.com as Certificate Authority
+			3.Simplifies domain verification
+			4.You can automatically renew the certificate
+			5.Certificate is stored in Azure Key Vault
+			6.you can use the certificate 
+				-With Azure App services
+				-Any other Azure app
+				-Any on-premises app
+		Data Store encryption features
+			1.Encrypts your data at rest
+			2.Most Azure data services provide encryption at rest
+			3.Encrypts and decrypts automatically
+				a)No noticeable performacnce impact
+				b)Azure takes care of key management
+			4.Azure storage service encryption
+				a)Encrypts and decrypts
+			5.Azure SQL Transparent Data Encryption
+		Authentication
+		Store secrets
+		Certificate
+		Storage encryption
+		Store Users
+		Transparent Data Encryption
+Comparing the options
+Securing Your Application in Azure
+	AAD
+		1.Authenticate users for applications
+		2.Store user identities
+	Key Vault
+		1.Store Keys and secrets
+	AppService Certificate
+		1.Easily provision a TLS certificate
+	Encryption Features
+		1.Protect data at rest
+Where to Store Data for your Applications in Azure
+Options for Storing Data in Azure
+	Azure SQL Database
+		1.SQL Server in the cloud
+		2.Managed and scalable
+		3.Highly available(99.99%) and redundant
+		4.Relational data
+		5.Use it with Microsoft tools
+			-SSMS,Azur Portal,Visual studio
+		6.Advanced capabilities
+			a)Geo-replication(single writable node)
+			b)Automatic tunning
+			c)Threat detection
+			d)Dynamic Data Masking
+	Azure Databases for MySQL
+		1.MySQL in the cloud
+		2.Managed and scalable
+		3.Highly available(99.99%) and redundant
+		4.Relational data
+		5.Works well in the LAMP stack
+			a)Linux,Apache server MySQL and PHP
+		6.Use it with tools for MySQL
+			a)MySQL workbench and SQLLog
+	Azure Databases for PostgreSQL
+		1.PostgreSQL in the cloud
+		2.Managed and scalable
+		3.Highly available(99.99%) and redundant
+		4.Relational data
+		5.Flexibility
+			a)Write functions in serveral languages
+			b)Use PostgreSQL extensions
+		6.Use it with tools for PostgreSQL
+			a)pgAdmin
+		
+	Azure Databases for MariaDB
+		1.MariaDB in the cloud
+		2.Managed and scalable
+		3.Highly available(99.99%) and redundant
+		4.Relational data
+		5.Supports many storage engines
+			a)Apache Cassandra,CSV,ColumnStore
+		6.Use it with tools for MariaDB
+			a)Database Workbench and SQLLog
+	
+	Azure CosmosDB
+		1.Distributed,massive scale database
+		2.Use it with several APIs
+			a)DocumentDB API
+			b)MongoDb API
+			c)Table API
+			d)Graph API
+			e)Apache Cassandra API
+		3.No predefined schema needed
+		4.Automatic indexing
+		5.Geo-replication(single writable node)
+		6.Unique SLA
+			-99.99%(99.999% read)availability
+			-Latency on reas <10ms,writes <15ms
+		
+	Azure Storage(Blob,file,queue,Table,Disk)
+		1.Massive scale,multi-purpose storage
+		2.Multiple models in a storage account
+			a)File storage
+				-Lift and shift files to the cloud
+				-File storage based on SMB protocol
+				-Mount an Azure FIle share in
+					-Window,Linux
+				-All Azure Storage features
+			b)Blob Storage
+				-Store unstructured data in the cloud
+				-Multiple blob types
+					Block,Page and Append
+				-Multiple storage tiers
+					-Hot,Cool,Archive
+			c)All Azure Storage features
+			c)Queue storage
+			d)Table Storage
+				Store semi-structured data in the cloud
+				Flexible data schema
+				All Azure Storage features
+			e)Azure Disk storage
+				-High performance file storage in the cloud
+				-Part of the Premium pricing tier
+				-Perfect for use in Virtual Machines
+				-Lift and shift high performance apps to the 				  cloud
+				-All Azure storage features
+		3.Shared Access Signatures
+		4.Firewall and Virtual Networks
+		5.Data encryption at rest
+		6.Storage replication
+			-Locally-redundant
+			-Geo-redundant
+			-Read-access-geo-redundant
+		
+	Azure SQL Data Warehouse
+		1.For prepared,structured data for reporting
+		2.Relational data
+		3.Optimized for reporting purpose
+		4.Large amounts of data(1PB)
+		5.Data encryption at rest
+			-Transparent Data Encryption
+		
+	Azure Data Lake Store
+		1.For structured and unstructured data for reporting
+		2.Data in native format
+		3.No schema definition
+		4.Optimized for reporting purposes
+		5.No file or datastore size limits
+		6.Data encryption at rest
+	Relational Data
+		1.Azure SQL Database
+		2.Azure Databases for MySQL
+		3.Azure Databases for PostgreSQL
+		4.Azure Databases for MariaDB
+	Unstructured /document data
+		1.Azure CosmosDB
+		2.Azure Storage(Blob,file,queue,Table,Disk)
+	Data Analytics
+		1.Azure SQL Data Warehouse
+		2.Azure Data Lake Store
+	OLTP(Online Transactiona Processing)
+		1.Azure SQL Database
+		2.Azure Databases for MySQL
+		3.Azure Databases for PostgreSQL
+		4.Azure Databases for MariaDB
+		5.Azure CosmosDB
+		6.Azure Storage(Blob,file,queue,Table,Disk)
+	OLAP(Online Analytical Processing)
+		1.Azure SQL Data Warehouse
+		2.Azure Data Lake Store
+Comparing Data stores for OLTP
+	SQL
+		1.Relational Data
+		2.Can use microsoft tools to manage
+		3.Advanced querying capabilites
+	MySQL
+		1.Relational Data
+		2.Advanced querying capabilites
+	PSSQL
+		1.Relational Data
+		2.Advanced querying capabilites
+	MariaDB
+		1.Relational Data
+		2.Advanced querying capabilites
+	Cosmos
+		1.Semi-or non-relational data
+		2.Can use microsoft tools to manage
+		3.Advanced querying capabilites
+		4.Use multiple APIs to access data
+	Storage
+		1.Semi-or non-relational data
+		2.Can use microsoft tools to manage
+Comparing Azure Storage Services
+	File
+		1.Lift and shift files to the cloud
+	Blob
+		1.Store(large)unstructured data
+	Table
+		1.Store(small)semi-structured data
+	Disk
+		1.Lift and shift applications to the cloud
+Comparing Data Stores for OLAP
+	Azure SQL Data Warehouse
+		1.Relational data
+		2.Requires you need to define a data schema
+		3.Use when you know which questions you 
+		  want the data to answer
+	Azure Data Lake Store
+		1.Relational data
+		2.Non-relational data
+		3.No file-or database size limits
+What to Use to Do Data Analytics
+Options for Doing Data Analytics in Azure
+	Apps,Devices,Logs
+	Storage,Data Factory,Event Hubs,Streaming Analytics
+	HDInsight,Storage,Data Warehouse,Storage
+	Dashboard,Application
+
+
+What to Use for Speeding up Your Applications
+Options for Speeding your Apps up in Azure
+	Azure CDN(Content Delivery Network)
+		1.Use it to offload trafic to static content
+		2.Replicates static content globally
+			-Points-of-Presence
+			-Content is closer to users
+		3.Choose from multiple providers
+			-Verizon
+			-Akamai
+	
+	Azure Redis Cache
+		1.Provides in-memory data for optimal speed
+		2.Based on the open-source Redis cache
+		3.Stores data in Key/Value
+			-Hashes and Lists
+		4.Advanced features
+			-Geo-replication
+			-Data persistence
+	Azure Traffic Manager
+		1.Use it to direct global traffic
+		2.Global resource
+			-Not bound to a geographic region
+		3.Periodically pings endpoints for health and performance
+		4.Routes on:
+			-Availability
+			-Geographic performance
+			-Geographic location
+			-Priority/weight
+Comparing the Options
+	CDN
+		1.Offload traffic from your application
+		2.Bring data closer to users
+	Redis Cache
+		1.Bring data closer to users
+		2.Provides fast,in-memory access to data
+	Traffic Manager
+		1.Bring application closer to users

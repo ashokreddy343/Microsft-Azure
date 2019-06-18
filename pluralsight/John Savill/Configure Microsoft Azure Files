@@ -1,0 +1,27 @@
+Why this is important
+	1.Azure files provides a flexible,easy to use SMB-compatible storage solution
+	  and with azure files sync becomes a core part of the organizations file storage
+	  strategy
+SMB Overview
+	1.File-base protocol that can be mounted by Windows,Linux and
+	  Mac OS
+	2.Get-SmbConnection | f1 *
+Azure Storage Overview
+	1.One of the foundational services in Azure
+	2.Utilized through the creation of a storage account
+	3.A storage account has various properties
+		-Account kind
+		-Location
+		-Replication
+		-Performance
+		-Secure transfer requirement
+		-Virtual network configuration
+	Different storage services are supported:Blob,Queue
+	Table and Files
+Azure Storage Replication
+	Locally-redundant storage(LRS)
+		region
+			AZ1,AZ2,AZ3(same data center)
+	Zone-redundant storage(ZRS)
+	Geo-redundant storage(GRS)
+	Read-access geo-redundant storage(RA-GRS)

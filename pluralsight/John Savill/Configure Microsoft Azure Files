@@ -25,3 +25,59 @@ Azure Storage Replication
 	Zone-redundant storage(ZRS)
 	Geo-redundant storage(GRS)
 	Read-access geo-redundant storage(RA-GRS)
+Azure Storage Encryption
+	1.By default storage accounts are transparently encrypted
+	  at rest using a 256-bit AES encryption,Storage service Encryption(SSE)
+	2.This cannot be disabled and has no performance impact
+	3.This applies to blobs,tables,queues and files
+	4.For blobs and files customer-managed keys can be used through
+	  integration with Azure key vault
+	Secure Transfer
+		1.Encrypted connections to storage is optional
+Firewall and Virtual Network Integration
+	1.By default the various endpoints of the storage account are accessible to
+	  any client with the required keys
+	2.Specific ranges of IP addresses can be granted access
+	3.Virtual Network Integration enables access only from specific
+	  subnets of virtual networks within the same and paired region as
+	  storage account
+	
+Why Use Azure FIles ?
+	1.Azure Files provides an Azure Storage based on SMB solution
+	2.SMB 2.1 and 3 supported in addition for File REST protocol
+	3.Benefits from Azure hosting
+		-SLA -99.9%
+		-Availability - Worldwide footprint of regions 
+		-Redundancy
+		-Disaster recovery
+Creating an Azure File Share
+	1.Multiple Azure Files shares can be created under a 
+	  storage account
+	2.Each has a name and optional quota assigned
+Accessing Azure Files
+	1.Access is via standard SMB client
+	2.rest access can utilize shared access signatures(SAS)
+	Shared Access Signature Usage
+		a.when using SAS access to specific shares and files
+		  can be granted
+		b.SAS tokens based on polcies
+		c.Tokens can limit rights and the duration of access
+		d.The SAS token is used when establishing the storage context
+Azure Active Directory Authentication
+	1.Azure Files utilize Azure AD for authentication via Azure
+	  AD Domain Services
+	Azure AD Authentication Requirements
+		a.Azure AD Domain Services must be deployed to the virtual network
+		b.Usage must be from a machine joined to the AAD DS instance
+		c.ACLs must be copied to Azure files via Robocopy
+		d.The Azure Files share must NOT be part of an Azure Files Sync 
+		  sync group
+		e.A drive must be mapped to the Azure Files share
+Azure AD Domain Services 101
+Azure Files Scale and Limits
+	1.500 TB storage account
+	2.5 TB File Share
+	3.1 TB MAx file size
+	4.1000 IOPS peer share
+	5.60 MBps throughput
+	6.99.9% read access to data SLA

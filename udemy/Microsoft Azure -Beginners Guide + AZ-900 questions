@@ -1,0 +1,42 @@
+What is cloud computing?
+	1.cloud computing is the delivery of computing
+	  services-servers,storage,database,networking,
+	  software,analytics,intelligence and more -over the
+	  the internet(the cloud) to offer faster innovation,flexible
+	  resources and ecnomices of scale.
+	2.you typically pay only for cloud services you use,
+	  helping lower your operating costs,rung your
+	  infrastructure more efficently
+Cloud Computing
+	1.Don't need to manage data centers
+	2.Don't need to buy physical hardware upfront
+	3.Create resources on demand on the cloud
+	4.Only pay for how much you use
+What is Azure ?
+	CLoud Computing service
+	Built by microsoft
+	Build,Deploy and Manage applications
+	Used by developers and IT Professionals
+Resources and Resource Groups
+	what is a resource
+		an item define in Azure
+		Virtual machine
+		A virtual network
+		A SQL Database
+	Resource Group
+		1.Logical placing for your resources
+		2.Manage your resources collectively
+		3.Easier to maintain
+		4.Role Based access
+		5.All of the resources are deployed via the Resource Manager
+Resource Location
+	1.Different data centers located around the world
+	2.Create a resource(Virtual Machine) in West Eurpoe,Central US>
+	3.You would ideally create a resource in a region that is 
+	  closest to your users
+	4.see Micrsoft documentation for Azure Regions
+	  Products available by particular region
+Introductory Quiz
+	1.What is the container which is used in Azure to host resources
+		Resource Groups
+			All resources need to be placed in a group called a resource group

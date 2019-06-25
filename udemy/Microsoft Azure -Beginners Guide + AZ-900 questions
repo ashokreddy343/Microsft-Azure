@@ -40,3 +40,25 @@ Introductory Quiz
 	1.What is the container which is used in Azure to host resources
 		Resource Groups
 			All resources need to be placed in a group called a resource group
+Azure Virtual Machines
+	There is a lot more
+		Virtual Network
+			VM
+			Disk
+			IP
+			NIC(Network Interface Card)
+	Settings for the virtual Machine
+		1.Name of the machine
+		2.The disk type			
+		3.Login user name and password
+		4.Subscription
+		5.Resource Group
+		6.Location for your resource
+		7.Size of your machine(CPU,Memory,Disk size support,
+		  Additional features)-this affects the pricing
+		8.Storage for the Virtual Machine
+		9.Virtual network
+		10.Subnet
+		11.IP address
+		12.Network Security Group Rules
+	Installing IIS on the VM

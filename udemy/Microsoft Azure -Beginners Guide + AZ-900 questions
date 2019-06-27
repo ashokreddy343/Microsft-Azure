@@ -62,3 +62,48 @@ Azure Virtual Machines
 		11.IP address
 		12.Network Security Group Rules
 	Installing IIS on the VM
+Azure Virtual Machine Types
+	1.General Purpose
+	2.Compute Optimized
+	3.Memory Optimized
+	4.Storage Optimized
+	5.GPU
+	6.High performance Compute
+Azure Virtual Machine Reserved Instances
+	1.Option to pay upfront
+	2.Make a commitment of 1 year or 3 years
+	3.Decide on the region,machine type
+	4.Potential to save on costs by 72% from pay as you go
+Virtual Machine Series
+Costing for Azure resources
+	1.pricing depends on the resource you choose
+	2.you should always check how the pricing works for a particular
+	  resource
+	3.virtual machines
+		-Depends on the size of the VM
+		-Bigger capacity for CPU Memory -additional costs
+		-Depends on the region
+		-Depends on the type of Operating System
+		-Rember you also get charged for the underlying Operating System Disk
+	4.There is a pricing calculator which can be used to give an estimate of the costs
+	5.There is also a cost management feature available for azure
+	6.Look for caveats in costing
+	7.For virtual machines
+		-if you shutdown from the os,you will get charged
+		-To not get further charged,shutdown the os from the portal or powershell.
+		 here  the machine will get deallocated
+	Cost Management + Billing - Billing accounts provided by azure
+State of the Virtual Machine
+	VM
+	   1.OS Disk -127 GB
+	   2.Temporary Disk - 4GB
+	      Do not stroe important data on the Temporary Volume
+	How can you stop and start a virtual machine
+		1.you can go to the OS and shutdown the virtual machine
+		2.You can also go to the portal and shutdown the VM
+	1.if you have a web application that needs to have an IP that does not change
+	  consider using a static IP
+	2.if you want to store application data on separate volume apart from the OS
+	  level disk,consider attaching data disks
+	3.Each data disk can be of maximum size of 4 TB
+	

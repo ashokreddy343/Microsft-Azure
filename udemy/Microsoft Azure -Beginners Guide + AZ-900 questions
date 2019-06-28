@@ -106,4 +106,23 @@ State of the Virtual Machine
 	2.if you want to store application data on separate volume apart from the OS
 	  level disk,consider attaching data disks
 	3.Each data disk can be of maximum size of 4 TB
-	
+Azure Marketplace for Virtual Mahines
+	installing wordpress site with azure vm
+Deleting Resources
+	1.you can delete resources that are no longer required
+	2.Key Note - This is when deleting a virtual machine
+	3.It will not delete the associated resource
+	4.The Virtual Network,Secuirty Group,Security Groups need to be
+	  deleted manually
+	5.if you want to delete all of the resources,need to be part of a 
+	  resource group or write a script to delete all associated resources
+Quiz on Virtual Machines
+	1.What is the component of the Virtual Machine that allows it to be accessed from your workstation
+		Public IP Address
+			a.The Public IP Address which gets assigned to the Virtual machine
+			   allows it to be accessed from the internet
+	2.What happens to data that is stored on the temporary disk when the virtual machine is 
+	  stopped and started from the portal
+		The data on the disk gets deleted
+			When the VM is stopped and started from the portal , the data on 
+			the temporary hard disk gets erased

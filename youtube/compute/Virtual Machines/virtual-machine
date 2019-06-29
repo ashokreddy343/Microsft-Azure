@@ -1,0 +1,12 @@
+https://azure.microsoft.com/en-in/services/
+The core capabilities in Azure Bastion include
+	1.RDP and SSH from the Azure Portal
+	2.Remote session over SSL and firewall traversal for RDP/SSH
+	3.No public IP address required on Azure Virtual Machines
+	4.Simplified secure rules management
+Azure Virtual Machine Serial Console
+	1.The serial console can only be accessed by using the 
+	  Azure portal and is allowed only for those users who 
+	  have an access role of Contributor or higher to the
+	  VM or virtual machine scale set.
+	

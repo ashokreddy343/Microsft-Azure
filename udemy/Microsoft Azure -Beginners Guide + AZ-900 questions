@@ -126,3 +126,151 @@ Quiz on Virtual Machines
 		The data on the disk gets deleted
 			When the VM is stopped and started from the portal , the data on 
 			the temporary hard disk gets erased
+Networking
+	ip addresses
+		private - vm1 <->vm2 communication
+		public  - Vm1 -> internet 
+	Network CIDR
+		CIDR Block
+		10.0.1.0/24 - 24 is network mask
+		24 means 8+8+8= constant total 32 bits
+		10.0.1 -networkid it means constant throught network
+		remaining 8 bits is hostid
+		10.0.1.10 
+			networkid= 10.0.1
+			hostid =10
+		you can define 250 ip addreses in this network
+	Virtaul Network Basics
+		web server -10.0.1.5 -uniquely identify particular network
+		Database server - 10.0.1.6
+		network
+		subnets
+	Azure Networking
+		virtual network -10.0.0.0/16
+			subnets
+				subnet1(10.0.1.0/24)-webserver -10.0.1.5
+				subnet2(10.0.2.0/24)-webserve -10.0.2.6
+		Communication in a an Azure Virtual Network	
+	Network Security Groups
+		1.list of Rules
+		2.Allow or Deny traffic to your virtual machines
+		3.Security mechanisum available for your virtual machines
+		4.Inbound and Outbound Rules
+		5.Source IP and Source Port no
+		6.Destination IP adn Destination Port No
+		7.Protocol -HTTP ,HTTPS,TCP etc
+		8.Prority
+		9.Allow or Deny
+	Azure Network Security Groups -Rules Priority
+		1.
+Azure Storage
+	Azure BLOB storage
+		1.For storing objects such as files,videos,virtual machine disks
+		2.you can access the objects via HTTP or HTTPS
+		3.Applications can store their artefacts in BLOB storage
+		4.Good for writing log files
+	Azure Table storage
+		1.Structured NoSQL in the cloud
+		2.No particular schema
+		3.Flexible for your web applications
+		4.User data for your web applications
+	Azure Queue storage
+		1.Storing messages
+		2.Messages distributed across applications
+		3.Application->Queue->Application
+	Azure SQL Database
+		1.Database hosted in Azure
+		2.Here you need to worry about the infrastructure
+		3.This is managed by Azre
+		4.Options such as automated backups
+		5.Can have long term backups
+		6.Can restore databases
+	Azure CosmosDB
+		1.Multi-model database -Formerly known as DocumentDB
+		2.Table API
+		3.CosmosDB API
+		4.MongoDB API
+		5.Graph API
+Azure BloB Storage
+	1.create storage account
+		create container 
+			container host files
+	2.Block Blobs -store text and binary data
+	3.append Blobs -Good for log files
+	4.Page Blocks -Used to store Virtual Hard disk files
+	Different storage account options
+		1.Genera Purpose(v2)
+			-Latest features for blob,files,queues and tables
+			-Hot and cool tier
+			-Hot -frequently access
+			-cool -archive storage
+		2.General Purpose(v1)
+			-Earliet version of storage accounts
+		3.Blob storage accounts
+			-only supports block blobs
+	Other aspects
+		-Storage replication
+			-if you are storing critical data,azure can replicate 
+			 the data to another region
+		-Standard/Premium
+			-Premium storage backed by SSD disks
+			-Only available for virtula machines
+			-if you are hosting a database with high I/O
+	Replication
+		1.Locally-redundant storage(LRS)
+		2.Zone-redunant storage(ZRS)
+		3.Geo-redundant storage(GRS)
+		4.Read-access-geo-redundant storage(RA-GRS)
+	Workign with Objects in BLOB storage
+		1.Storage account 
+		2.URL of the account
+		3.Container -Demo
+		4.Steps.txt
+		5.Can access the file via the complete URL
+		Access level
+			a.Private(no anonymous access)
+			b.Blob(anonymous read access for blobs only)
+			c.Container(anonymous read access for containers and
+				    blobs)
+		Autentication type
+			a.Azure AD user account
+			b.Account key
+		Access Tier
+			Hot(Inferred)
+			Cool
+			Archive
+	Generate SAA
+		1.A shared access signature (SAS) is a URI that grants restricted access rights to 		  Azure Storage resources (a specific blob in this case).
+		2.you grant them access to a resource for a specified period of time.
+		Permissions
+			Read,Write,Create,Delete
+	Azure File Storage
+		1.Storage that can be accessed via the Server Message Block
+		Advantages		
+			1.No need to maintain the physical server
+			2.No need to maintain storage
+			3.Save costs on other aspects like networking
+	Azure Queue Storage
+		1.Exchanging Messages across Applications
+		2.You can add messages via the console
+		3.But ideally you would have a program to add and read messages
+		4.Program
+			-First add a message to the queue
+			-Next when reading a message there is a 2 step process
+			-First Step -Read the message.the message becomes invisible in
+			 the queue for 30 seconds
+			-Delete the message
+			-We are going t use keys
+		install windows.Azure.storage from nuget package manager console
+	Azure Table Storage
+		1.Structured NoSQL Data
+		2.There is no pertinent schema
+		3.Properties are name/value pairs
+		4.Each table is made up of Entities
+		5.Use case of storing User data for webapplications
+		6.Can store TBs of data
+		7.Key note -Good for data that don't require complex joins
+		  foreign keys or stored procedures
+		8.Here you just want fast access to data
+		9.To add data you need to have the storage explorer or add data via
+		  a .Net program

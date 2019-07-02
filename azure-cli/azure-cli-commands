@@ -1,0 +1,4 @@
+https://docs.microsoft.com/en-us/azure/virtual-machines/azure-cli-arm-commands
+az help
+az account list
+    List the imported subscriptions

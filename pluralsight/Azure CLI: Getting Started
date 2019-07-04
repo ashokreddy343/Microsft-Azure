@@ -1,0 +1,25 @@
+Introducting the Azure CLI
+	1.A cross-platform command line interface for managing Azure resources
+	2.it will support for windows,mac,linux
+	Managing Azure Resources
+		1.Create new resources
+		2.Querying existing resources
+		3.Update existing resources
+		4.Delete resources
+	Options for Managing Azure Resources
+		1.portal.azure.com
+ 		  great for exploring
+ 		  Not automated
+		2.Azure Powershell
+		  Comprehensive
+		  Great for windows
+		3.Azure CLI
+		  Cross-platform
+		  Comprehensive
+		  Open Source
+		4.SDKs
+		  Fluent .net api
+		  other languages
+		  Service Principal
+		5.Azure managment REST API(JSON)
+	Installing the Azure CLI

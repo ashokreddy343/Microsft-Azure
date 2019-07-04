@@ -2,3 +2,18 @@ https://docs.microsoft.com/en-us/azure/virtual-machines/azure-cli-arm-commands
 az help
 az account list
     List the imported subscriptions
+az account
+	az account -h
+	az account list
+		get a list of subscriptions for the logged in account
+	az account list --output table
+	az account list-locations --output table
+		list supported regions for the current subscription
+	az account show
+		get the details of a subscription
+	az account show --output table
+	az account show -h
+	az account get-access-token
+		get a token for utilities to access azure
+	az account clear
+		Clear all subscriptions from the CLI's local cache

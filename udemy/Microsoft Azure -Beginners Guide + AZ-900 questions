@@ -274,3 +274,33 @@ Azure BloB Storage
 		8.Here you just want fast access to data
 		9.To add data you need to have the storage explorer or add data via
 		  a .Net program
+Azure SQL Database
+	1.Microsoft SQL Server on the cloud
+	2.Helps in managing the infrastructure
+	3.Has a lot of useful features
+	4.Automated Backup
+		-Here full,differential and transaction log backup are taken
+		-Help in point in time recovery of your database
+		-There is a particualr retention period for the database
+		-You can recover to a particular point in time on the same
+		  server as the source database
+	5.you can easily export your existing data
+	6.You can also have long term retention
+Azure SQL Database - Elastic Pools
+	1.eDTU's get shared and allocated to the different databases 
+	  based on the demand
+	2.Unpredicatable workloads
+	3.Add database to the pool or add/remove eDTU's from the pool
+	4.An elastic pool provides elastic database transaction units 
+	 (eDTUs), and storage (GBs) 	 
+	 that are shared by multiple databases
+Azure SQL Databases -IaaS vs PaaS
+	IaaS
+		-When you want to have have control the underlying database software
+		-You have security compliance where you have custom procedures on how
+	 	  to manage admin tasks like backups
+		-Good if you have an existing DB-on-premise and want to migrate
+	PaaS
+		-you don't want the Administrative burden
+		-you are starting fresh
+

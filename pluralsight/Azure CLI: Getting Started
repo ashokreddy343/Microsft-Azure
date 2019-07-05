@@ -23,3 +23,22 @@ Introducting the Azure CLI
 		  Service Principal
 		5.Azure managment REST API(JSON)
 	Installing the Azure CLI
+az --version
+az account show 
+az account list
+az account set -s "MVP (VS Enterprise"
+Getting Help
+	az webapp -h
+	az webapp config -h
+	az interactive	
+	ctrl+D :exit from interactive session
+Configring Output Formats
+	az group list
+	az group list -o table
+	az group list -o tsv
+	az group list -o jsonc
+	az  group list -o json
+	az functionapp list
+Filtering Output with Queries
+	Filtering output with --query
+	JMESPath

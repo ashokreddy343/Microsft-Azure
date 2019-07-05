@@ -304,3 +304,27 @@ Azure SQL Databases -IaaS vs PaaS
 		-you don't want the Administrative burden
 		-you are starting fresh
 
+SQL vs No-SQL
+Azure CosmosDB Introduction
+	1.earlier it is called DocumentDB
+	2.multimodel database
+	3.different apis available 
+		SQL,Table,MongoDb,Cassandra,Gremlin
+	4.no need to worry about infrasturucture 
+Azure CosmosDB
+	1.Multi-model database service
+	2.Create a CosmosDB account
+	3.Allows you to store different types of data depending
+	  on the API you choose
+	4.JSON data - Choose the SQL API
+	5.Table data - Choose the Table API
+	6.MongoDB - Choose the MongoDB API
+	Features
+		1.Replication data to multiple regions
+		2.Allows users in various location get a seamless experience
+		3.Fully Managed- you don't need to worry about infrastructure
+		4.you can scale the throughput for the database
+		5.Five to ten times more cost effective than a non-managed
+		  solution or an on-prem NoSQL solution
+		6.Better Performance and Service level agreements
+		7.Better Throughput

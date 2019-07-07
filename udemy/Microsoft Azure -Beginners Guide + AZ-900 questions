@@ -328,3 +328,120 @@ Azure CosmosDB
 		  solution or an on-prem NoSQL solution
 		6.Better Performance and Service level agreements
 		7.Better Throughput
+Additional Services on Azure
+Azure Web Apps
+	1.Managed service for your web application
+	2.Here you don't need to worry about managing the infrastructure
+	.net web app->azure web app ->vm
+		1.spin up the virtual machine
+		2.install IIS
+		3.Host your application
+	3.The web app needs to be part of an app service plan
+	4.Each App service plan has certain features and a price attached to it
+	5.Free Tier
+		-10 apps
+		-1 GB space
+	6.Basic
+		-Unlimited Apps
+		-10 GB Space
+		-3 Instances
+	7.Standard Tier
+		-Unlimited Apps
+		-50 GB Space
+		-10 instances
+		-SLA - 99.5%
+		-Autoscaling
+		-Deployment slots
+	once created azzure web app it's created
+		App Service 
+		App Service plan
+	Scale up (app service plan)
+		1.Dev/Test
+			Included hardware
+				Azure Compute units(ACU)
+				Memory
+				Storage
+		2.Production
+			included features
+				custom domain/SSL
+					a.Confgigure and purchase custom domain with SNI and
+					  IP SSL bindings
+				Auto Scale
+					a.Up to 10 instances.Subject to availibility
+				Staging Slots
+					a.Up to 5 staging slots to use for testing and deployments
+					  before swapping them into production
+				Daily backups
+					a.Backup your app 10 times daily
+			Include Hardware	
+				a.Azure compute Units(ACU)
+				b.Memory
+				c.Storage
+	Scale out(App service plan)
+		1.increase vm instances
+Availablity sets
+App Service Certificate 
+	App Service Certificates allows you to Purchase and manage SSL certificates within few 	 minutes. Some of the Key Features include,
+		a.Secure one Web App (root domain and WWW)
+		b.Secure one Web App and all its sub-domains (Wildcard SSL)
+		c.1 Year validity with auto renewal
+		4.A Domain Validated Certificates (DV) with easy and intuitive validation process
+		5.By default, Certificates secrets are stored in Azure Key Vault
+		6.SHA-2 and 2048-bit encryption – the strongest on the market
+		7.Compatible with all major browsers
+	App service certificate creation
+		Name
+		Naked Domain Host Name
+		Resource group
+		Certicate pricing
+			a.Standard
+			b.Wild Card
+
+List of services required for complete web application
+	Appservice Certificate
+		a.CN=DistinguishedName 
+		b.Thumbprint
+		Certificate Configuration
+			Step 1: Store 
+				Certification suceessfully imported to key Vault
+			Step 2: Verify
+				Domain ownership verified
+			Step 3: Assign
+				Certicate ready to use in App Service
+		Auto Renew Settings
+		Timeline
+		Rekey and Sync
+		Properties
+		Locks
+		Export Template
+
+	App Service
+		Deployment
+		Settings
+		App service plan
+		Development tools
+			Clone app
+			console
+			Advanced Tools
+			App Service Editor(preview)
+				App Service Editor provides an in-browser editing experience for your App code.
+				Performance test
+				a.we can perform performance test
+					Name
+					Generate load from
+					User load
+					Duration(minutes)
+			Resource explorer
+			Extensions
+		API
+			API definition
+			CORS		
+		Monitoring
+			alerts,Metrics,App service logs
+			Log stream,Process explorer
+	App Service Domain
+	DNS zone
+	App Service plan
+	DisKey vault
+
+

@@ -1,1 +1,36 @@
-https://www.youtube.com/watch?v=K4xtrUViUBQ&list=PLPie5drlGW25NnMjef7HRdSAqEjxz66Ky&index=3
+Azure Account,Subscriptions and Admin Roles
+	As per microsoft two different types of accounts
+		1.Microsoft account
+			demo@hotmail.com
+			demo@outlook.com
+			demo@live.com
+		2.Organizational Account
+			ashok@ey.com
+	Azure Account
+		1.Create at Azure account center
+		2.Creates the umbrella under which Azure Subscriptions reside
+		3.There may be multiple Azure Subscriptions under one Azure Account
+	Azure Subscriptions
+		1.Subscriptions organize how cloud sservices are accessed
+		2.Subscription control how resource usage is reported,billed and paid for
+		3.Subscription can be setup for sepearate billing and payment
+		4.All cloud services belong to a subscription
+		5.Subscriptions have an ID
+	Account Administrator
+		1. 1 per Azure Account
+		2.Account Administrator is authorized to access Account center
+		3.Can create subscriptions,cancel subscriptions,change billing
+		4.Change-service Administrators
+		5.Does not have any other access to services in that subscription
+	Service Administrator
+		1.All subscriptions need a Service Administrator
+		2.1 per subscription
+		3.Authorized access to Azure Management Portal
+		4.Account Admin is default service Admin when a susbcription is created
+		5.Only Account Administrator can change a Service Administrator
+	Co-Administrator
+		1.200 per Azure Subscriptions
+		2.Same as Service Administrators
+		3.Can'delete Service Administrators
+		4.Can't change associations of subscriptions to Azure Directories
+https://www.youtube.com/watch?v=hM5Esr-WnII&list=PLPie5drlGW25NnMjef7HRdSAqEjxz66Ky&index=4

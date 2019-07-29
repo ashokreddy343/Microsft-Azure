@@ -1,0 +1,23 @@
+Exploring your global scenario
+	asp.net core
+	HTTPS
+	Azure web app
+	CDN
+	Azure redis cache
+	Azure Active directory
+	Logic App
+https://github.com/bmaluijb/internationalcookies
+Getting started with Azure Development
+Software Development in the Cloud
+	The Magic of the cloud
+		Ease of use
+		Scalability
+		Pay for what you use
+Setting up Enviornment
+	Visual stuido+Azure dev labs
+Creating the web application
+Implementing CDN to Speed up your website
+	Azure CDN Profile
+	Azure Blob Storage(azure cdn endpoint)
+CDN Demo
+	CDN profile and endpoint

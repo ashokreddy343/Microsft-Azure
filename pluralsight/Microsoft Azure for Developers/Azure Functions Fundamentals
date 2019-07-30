@@ -1,0 +1,58 @@
+Azure Functions
+	Part of App Service
+		-Now in Version 2
+	Simplified programming model
+		-Just the code to respond to the event
+		-Eliminate boilerpate
+		-Focus ont the business requirement
+	Consumption-based pricing model
+		-Pay as you go
+		-Oly pay for what you use
+		-Automatic scale
+Azure Functions Pricing
+	Run in an app serivce plan
+		-you can use existing pricing models
+	Or you can use the "Consumption" plan
+	Billing Model
+		-Number of executions
+		-CPU Time(s) * RAM(GB)
+	Free monthly grant
+		-1,000,000 executions
+		-4000,000 GB-s
+	Cutting Costs
+		Reduce your costs with
+			-Faster invocation times
+			-Fewer invocations
+			-Reduced memory requirements
+		Consumption plan
+			-Limited to five minutes per execution
+			-Optional daily quota
+Alternative Pricing Options
+	Regular app service plan
+		-Pay for dedicated servers
+		-Predictable monthly cost
+		-Several pricing tiers
+		-No function duration constraints
+Docket Containers
+	Host anywhere
+		-On premises
+		-Other cloud providers
+Benefits of Azure Functions
+	1.Rapid and simple development 
+		a.code within the azure portal
+		b.Eliminate boilerplate
+	2.all the power of azure web apps
+		CI,KUDU,Easy Auth,Certificates,
+		Custom Domains,Settings etc
+	3.Cost-effective pricing
+		-Pay for what you use
+	4.No servers to maintain
+		-Automatic scaling
+What is Serverless ?
+	There are still servers(of course)
+		-you delegate the management of them
+	Use platforma as a service wherever possible
+		eg.Cosmos DB,Autho0
+	Run your cusomt code on Azure Functions
+		-Responf to events
+		-Funcation as a Service(FaaS)

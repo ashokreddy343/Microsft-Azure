@@ -1,0 +1,54 @@
+Azure SQL
+	1.PaaS SQL service
+Some SQL server features are not supported
+	1.SQLCLR
+	2.Global temporay tables
+Database isolation
+Provisioning Azure SQL
+Connecting to Azure SQL DB
+Migrating to Azure DB
+	1.we have option Deploy Database to SQL Azure
+Undestanding SQL Security
+	Server level
+		FIrewall - IP based
+		Logins
+		Master DB roles
+	Database level
+		Firewall rules
+		Users
+		Database roles
+Understanding SQL DB Metrics and Auditing
+Backing up and protecting your Database
+Using SQL DB Geo-Replication
+Create rule
+	1.Select Resource
+	2.Select condition
+	3.Add type of actions
+Database level options
+	Overview
+	Activity log
+	tags
+	Diagnose and solve problems
+	Quick start -documentation
+	Query editor(preview)
+	Settings
+		a.Configure
+			DTUs
+				Basic
+				standard
+				premium
+			Data max size
+		b.Geo-Replication
+		c.connection strings
+		d.sync to other databases
+		e.Add azure search
+		f.properties
+		g.Locks
+		h.Export template
+	Secuirty
+		a.Advanced Data Secuirty
+		b.Auditing
+		c.Dynamic Data Masking
+		d.Transparent data encryption
+	
+https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-dtu

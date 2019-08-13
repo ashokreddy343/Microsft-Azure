@@ -1,0 +1,119 @@
+Using Custom Domains in Azure
+TLS in Azure
+	app service certificate
+	Azure key vault
+Using TLS Demo
+	1.Create App Service Certificate
+	2.Create Key vault and store certificate in key vault
+	3.Verify certificate domain
+	4.Assign certificate to web app
+Global Scale with Azure Traffic Manager
+	it act as loadbalancer
+	we have the following services in web applications using
+		web app (west euprope)
+		Storage account (WE)
+		CDN Profile + End Point(WE)
+		App service certificate (WE)
+		Key Vault(WE)
+	What to Deploy?
+		Web App
+	GitHub->Vsts -build->Vsts Release
+					-Web app(WE)
+					-Web App(CUS)
+					-Web App(SEA)
+					-Web App(BS)
+	https://geopeeker.com/
+Summary-Creating the web application
+	1.How to deploy a website to a web apps
+	2.How CDN works
+	3.Custom domains /Azure App certificate
+	4.Traffic Manager
+	5.Visual Studio Team Services
+Traffic Manager profile
+	1.Azure Traffic Manager helps reduce downtime and improve responsiveness of
+	  important applications by routing incoming traffic across multiple deployments in different 	  regions
+	2.Built-in health checks and automatic re-routing help ensure high availability 
+	  if a service fails
+	3.Use Traffic Manager with Azure services including Web Apps, 
+	  Cloud Services and Virtual Machines - or combine it with on-premises 
+	  services for hybrid deployments and smooth cloud migration.
+	Use Traffice Manager
+		a.improve app availability with automatic failover
+		b.Increase your app's responsiveness by routing end users to
+		  the Azure location with lowest network latency.
+		c.Seamlessly combine on-premises and cloud.
+Connecting Data to the application
+About Azure Redis Cache
+	1.Cache-as-a-Service
+	2.In-memory data structure store
+	3.Recommended cache to use with Azure
+	4.Based on the open source Redis platform
+	5.Highly available(99.9%)
+	6.Key/value structure
+	7.Publish/subscribe
+JSON Outline
+Connecting Data to the Application - Summary
+	Azure SQL
+	Visual Studio database project
+	Visual Studio Team Services
+	Azure Redis Cache
+	Azure SQL Business Continuity
+Securing the application and Data
+	About Azure Active Directory
+		a.Identity-as-a-Service
+		b.Servers as an identity provider
+		c.Integrated with on-premises IDP
+		d.Protect cloud and on-premises applications
+		e.Multi-factor authentication
+		f.Advanced threat detection
+Securing the Application and Data -Summary
+	1.What to secure
+	2.Azure Active Directory(AAD)
+		-Applications
+		-Middleware
+		-Information from AAD
+	3.Secure connections with TLS
+	4.Transparent Data Encryption
+Orchestrating the on-boarding Process
+Options for Peerformance Testing
+	1.Visual Studio +VSTS
+		a.full performance testing
+	2.Azure Portal +VSTS
+		simple performance testing
+Happy Trouble Shotting in Azure
+A Look at Azure Troubleshooting Options
+	Development(Dev/Test/QA)
+		1.Debuging
+		2.Diagnosics logging
+		3.Application Insights
+		4.Operation Management Suite(OMS)
+	Production
+		1.Diagnostic logging
+		2.Application Insights
+		3.Operation Management Suite(OMS)
+About Debugging Web apps
+	1.Azure SDK 2.2 or higher
+	2.Debugger simultaneous connection limit
+		1.connection for free and shared tiers
+		2.5 connections for standard and premium
+	3.You need to turn debugging on
+		a.the setting will switch off after 48 hours
+	4.Requires debug version of your app
+Diagnostic Log Types
+	Application logging
+		a.Diagnostic trace information
+	We server logging
+		a.Diagnostic information from the web
+	Detailed error messages
+		a.Messages from expections
+	Failed request tracing
+		a.complete trace files of failed requests
+About Application Insights
+	Measure application metrics
+		-Usage
+		-Availability(require web tests)
+		-Failures and exceptions
+		-Performance
+		-Dependency performance and status
+	7 days raw data retained
+	90 days aggregated data

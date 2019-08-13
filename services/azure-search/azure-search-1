@@ -1,0 +1,45 @@
+azure search
+	Microsoft.Azure.Search - nuget package
+	https://ashoksearchservice.search.windows.net/indexes/commonindex/docs?api-version=2019-05-06&search=*
+	Headers
+		api-key  : 4BD2BCFED5841C962D50265681A0541F
+		Content-Type : application/json
+What is Azure Search ?
+	1.A search-as-a-service solution allowing developers to incorporate great
+	  search experiences into applications without managing infrastructure
+	  or needing to become search experts
+	Index
+		a.container for data,think table
+		b.Has schema,CORS options,search options
+		c.Create in portal or during app initialization
+	Typical schema
+		a.Fields definition:name,type,key
+	Search sepcifics
+		a.Field attributes - searchable,facetable etc
+		b.Linguistics and analysis
+		c.Suggesters for auto-complete
+		d.Scoring profiles for ranking tuning
+Support different types of data sources
+	1.Existing data source
+	2.Azure SQL Database
+	3.Sql server on Azure VMs
+	4.Cosmos DB
+	5.Azure blob Storage
+	6.Azure Table Storage
+demo app
+	http://azjobsdemo.azurewebsites.net/
+How does it work?
+	1.first you are going to crate service in azure portal
+	2.set up an index that your application can query to return 
+	  search results to end results.	
+	3.It works on a push-pull mechanism.So you can push information 
+	  into the index or you can pull it.
+	4.you have got native support for pulling information from 
+	  Cosmos DB, SQL Server Database, Azure SQL Database or even data 
+	  that is stored in Azure Storage, particularly data in table storage
+	5.Eventually everything is going to be JSON documents in the 
+	  index so you just have to be able to push the data into that.
+	6.There are command line tools and APIs and SDKs that help you to do that
+	
+Partitions and Replicas
+https://clemenssiebler.com/azure-search-quickstart-tutorial/

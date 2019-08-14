@@ -1,0 +1,25 @@
+https://www.edureka.co/blog/interview-questions/azure-interview-questions/
+
+What are the different types of services offered in the cloud?
+	IAAS-Infra Structure As a Service
+		1.you get the raw hardware from your cloud provider as a service
+		2.you get a server which you can configure with your own will.
+		3.Ex:AzureVM,Amazon EC2
+	PAAS-Platform As a Service
+		1.it gives you a platform to publish without giving the access 
+		   to the underlying software or OS. 
+		2.Ex:Web Apps,Mobile Apps in Azure
+	SAAS -Software as a service
+		1.no infrastructure, no platform, simple software that you can
+		 use without purchasing it.
+
+What is cloud computing?
+	1.It is the use of servers on the internet to “store”, “manage” and “process” data.
+	2.The difference is, instead of using your own servers, you are using 
+	  someone else’s servers to do your task, paying them for the amount of time you use it for.
+
+App Service overview
+	1.Azure App Service is an HTTP-based service for hosting web applications, 
+	  REST APIs, and mobile back ends.
+	2.App Service not only adds the power of Microsoft Azure to your application,
+	  such as security, load balancing, autoscaling, and automated management. 

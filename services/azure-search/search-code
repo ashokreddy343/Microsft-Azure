@@ -1,0 +1,33 @@
+using Microsoft.Azure.Search;
+using Microsoft.Azure.Search.Models;
+using System;
+using System.Collections.Generic;
+
+namespace azuresearchexample
+{
+    class Program
+    {
+        static SearchServiceClient searchClient;
+        static void Main(string[] args)
+        {
+            string apiKey = "4BD2BCFED5841C962D50265681A0541F";
+            string serviceName = "ashoksearchservice";
+            string indexname = "commonindex";
+            searchClient = new SearchServiceClient(serviceName, new SearchCredentials(apiKey));
+            customer customer = new customer();
+            customer.name = "Customer FirstName ListName";
+            customer.id = "1000";
+            var indexbatch=IndexBatch.MergeOrUpload(new List<customer>() { customer });
+            var indexClient=searchClient.Indexes.GetClient(indexname);
+            var result=indexClient.Documents.Index(indexbatch);
+        }
+
+        [SerializePropertyNamesAsCamelCase]
+        public class customer
+        {
+            public string id { get; set; }
+            public string name { get; set; }
+            public string address { get; set; } 
+        }
+    }
+}

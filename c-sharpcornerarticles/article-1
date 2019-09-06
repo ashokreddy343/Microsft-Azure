@@ -1,0 +1,6 @@
+Copy Our On-Premises Data To Azure Storage Using AZCopy
+	1.Create azure storage account
+	2.install azcopy MicrosoftAzureStorageAzCopy_netcore_x64
+	3.Azcopy /source:C:\Files /dest:https://ashokmyazcopy.blob.core.windows.net/mydatastore 
+    /destkey:5oPwEbYQI6621qv1S3FMhjbG5FDSM/bSv+8njUB1hpavTQAbXSiYEmueMuemqIhoKu5oWPVgNOK3J6nj/Al3YA==
+   

@@ -1,0 +1,27 @@
+Inside Microsift Azure Logic Apps
+	Why Consider Logic Apps ?
+		1.Serverless Architecture
+		2.200+ connectors
+		3.Ability to create codeless custom Connectors
+		4.Platform features like logging and tracking
+		5.Tight inegration with Azure features
+		6.Simple,yet powerfull
+	Serverless Atchitectures
+		1.No management of resources
+		2.High scale and availability
+		3.Automatic scaling
+		4.Billing based on use
+	Logic App Designer Options
+		1.Feature-rich web-based designer
+		2.Plug-in for Visual studio 2015 and 2017
+	Core Logic App Components
+		1.Triggers
+		2.Actions
+		3.Connectors
+		4.Flow Contorl
+	Demo
+		Processing Inbound XML Batch Data
+Request-response Scenarios
+	
+	
+		

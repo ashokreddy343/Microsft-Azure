@@ -1,0 +1,20 @@
+az account
+	Manage Azure SUbscription information
+	1.az account --help
+	2.az account list
+		a.get a list of subscriptions for the logged in account
+		b.az account list --help
+		  az account list --all
+		c.az accout list --refresh
+	3.az account clear
+		a.az account clear -h
+		b.Clear all subscriptions from CLIs local cache
+		c.to clear current subscription use az logout
+	4.az account get-access-tokent
+		a.az account get-access-tokent -h
+		b.Get a token for utilities to access azure
+		c.The token will be valid for at least 5 minutes with the maximum at 60 minutes
+		  if the subscription argument isn't specified,the current account is used
+	5.az account list-locations
+		a.List supported regions for the current subscription
+			

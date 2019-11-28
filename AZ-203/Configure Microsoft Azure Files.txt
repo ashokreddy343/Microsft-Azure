@@ -1,0 +1,592 @@
+String Mehods & Concatenation
+	1.concat
+	2.toUpperCase
+	3.toLowerCase
+	4.indexOf
+	5.lastIndexOf
+	6.charAt
+	7.substring
+	8.slice
+	9.replace
+	10.includes
+Template Literals
+	enclose string with back ticks(``)
+Arrays & Array Methods
+A look at the window object
+	window methods/objects/properties
+		1.window.outerHeight
+		2.window.outerWidth
+		3.window.scrollY
+		4.window.scrollX
+		5.window.location
+Block scope with let and const
+
+DOM Manipulation & Events
+	What is the DOM?
+		1.Document object model
+		2.Tree of nodes/elements created by the browser
+		3.Javascript can be used to read/write/manipulation to the DOM
+		4.Object oriented representation
+
+Examining the Document Object
+	document
+	document.all
+	document.all[0]
+	document.all[1]
+	document.all[2]
+	document.all.length
+	document.head
+	document.body
+	document.doctype
+	document.domain
+	document.URL
+	document.characterSet
+	document.contentType
+	document.forms
+	document.forms[0].id
+	document.forms[0].method
+	document.forms[0].action
+	document.links
+	document.links[0]
+	document.links[0].id
+	document.links[0].className
+	documnet.links[0].classList
+	document.links[0].classList[0]
+	document.images
+	document.script
+DOM Selectors for Multiple ELements
+	1.document.getElementById()
+	2.document.getElementById('').className
+	document.querySelector()
+DOm Selectors For multiple Elements
+	
+
+
+
+
+
+
+chrome dev tools
+	copy(document.getElementById('html')[0])
+Experimental chrome featues
+	chrome://flags
+GUI Style Editors
+	codepen
+Basic Javascript Debugging
+	https://developers.google.com/web/tools/chrome-devtools/console/api	
+
+asynchronous-javascript
+	https://github.com/jawache/async-javascript-workshop
+	https://node.green
+	How to get setup with Visual Studio code
+		Node Exec
+		Live server
+		Prettier -Codeformater
+	V8 vs Node vs Chrome
+		1.v8 is a Javascript engine
+		2.Node embeds and extends v8
+		3.Chrome embeds and extends v8
+		4.Electorn embeds and extends v8
+		5.V8 is a synchrnous
+Understanding Asynchronous vs synchronous
+	1.Synchronous code is easier to predict
+	2.Asynchronous code is harder to predict
+	3.Asynchronous code better for performance
+Blocking vs Non-Blocking
+	1.Hardware is non-blocking
+	2.Hardware is asynchronous
+	3.Non-blocking is far better for performance
+	4.Blocking is an idea we invented
+	5.Non-blocking is asynchronous
+
+Income
+	What money do you have coming in each month?
+Expenses
+	How do you spend you money each month?
+	Housing
+	Auto
+	Groceries
+	restaurants
+	utilities
+	health
+	Personal phil
+		gifts
+		rarely for home items
+	personal 
+Tools to Help You Track Your Spening
+	1.Microsoft Excel
+	2.Mint.com
+	3.PersonalCapital.com
+
+	
+Availability Set
+	1.An availability set is a group of virtual machines that are deployed across
+	  fault domains and update domains
+	2.Availability sets make sure that your application is not affected by 
+	  single points of failure, like the network switch or the power unit of a rack of servers.
+	Fault domain
+		a.Virtual machines in the same fault domain share a common power  source
+		  and physical network switch
+	Update domains
+		a.virtual machines in the same update domain will be restarted during 
+		  planned manintenace.
+		b.Azure never restrarts more than one update domain at a time
+Azure Scale Sets
+	1.Group of identical and load balanced virtual machines
+	2.The number of instances can change  based on demand or schedule
+	3.Scaling your application based on load
+	4.Provides high avaliblity for your application
+
+
+
+
+Azure Functions Fundamentals
+Azure Functions= Events + Code
+	Time
+		Run a background task on a regular schedule
+	Data
+		Process messages in a queue or new items in blob
+		storage
+	Web
+		Respond to a HTTP request or web-hook
+	
+
+Azure DevOps: Getting Started
+Azure DevOps Is Not Your Parent's TFS
+	Big Pieces
+		Version Control
+		Project Management
+		Defect Tracking
+		Automated Builds
+		Automated Releases
+		QA Testing
+	Big Ideas
+		Two flavours
+			-Cloud
+			-On-premise
+		More than just version control
+			-Git
+			-TFVC
+		Platform agnostic
+			-Cross-platform development
+			-Not just for .NET and WIndows
+List of Huge Changes in 2018
+	1.Changed the user interface in VSTS
+	2.Renamed visual studio Team Services to Azure Devops
+	3.Renamed all the component pieces of VSTS
+	4.Renamed Team Foundation Server to Azure DevOps
+Azure DevOps is TFS in the cloud
+Azure DevOps is more than just TFS in the cloud
+Azure DevOps Server is packaged software
+What's a relase
+	integrate all the code
+	Test it
+		-And test it
+		-And test it
+		-And test it
+		-Probably miss bugs
+	Worry
+What Does Azure DevOps Look Like ?
+	Whos hosts the application ?
+		Mircrosft
+	Whos is the system adminstrator ?
+		Microsoft
+	Who writes software ?
+		Microsoft
+	Who applies the patches ?
+		Microsoft
+Packaged software is impractical to ship often
+Azure DevOps isn't packaged software.nothing gets shipped
+Why Is Azure DevOps ?
+Create Your FIrst Project in Azure DevOPs
+Two Types of Users in Azure DevOps
+	a.Microsoft Account(MSA) Users
+	b.Azure Active Directory(AAD) Users
+Account Types and Features
+	Users have account types
+		-Basic
+		-Stakeholder
+		-Visual stuido subscriber
+	Stake Holders
+		a.Free
+		b.Almost read only
+			Some project management access
+			View reporting dashboards
+			Approve releases
+			Subscribe to email alerts
+		c.No code access
+		d.No build or release access
+		e.can't create new dashboards
+	Basic
+		a.First 5 users are free
+		b.Stakeholder features plus all the other features
+		c.Unlimited private Git repositories
+		d.Missing features
+	
+Azure Serverless Functions and Logic Apps
+What is Serverless ?
+The Self-Hosted Days
+	a.Azure calls this "On Premises" servers
+	b.Could be in your office or in a datacenter
+	c.you pay in advance for a physical server and it's setup.you own it or lease it
+	d.you are responsible for everything
+From Server to VM in the Cloud
+	Infrastructure-as-a-service(IAAS)
+	A Virtual machine in the cloud
+	Looks,acts and behaves like a real server
+	Relatively easy to migrate from self-hosted
+What is a web app?
+	Platform-as-a-Service(PAAS)
+	A new model for web application design 
+	Instead of spinning up and down servers,leave that to Micrsoft
+	You only provide the code and Azure runs it
+	Basic application code design is the same
+What is a Serverless app?
+	a.Still is Platform-as-a-Service(PAAS) but more
+	b.you really don't know or care what the hardware is the runs the app
+	c.you don't have to take steps to scale
+	d.Azure functions,Azure Logic Apps,Azure Bots,Machine Learning
+	e.Integrating with Azure Storage and Azure Databases via API
+Facts abour serverless
+	a.Event-driven
+	b.Don't have applications that are always running,no concept of continous
+	c.Requires an event for something to happen,even a timer
+	d.Sub-Second billing(consumption)
+	e.if your app never runs,you don't get charged
+Small Code
+	a.Since a function is only doing one thing,the code is small
+	b.Small code is easier to create,easier to manage,less prone to bugs
+	c.Some functions can be 15 lines of code
+	d.Develop in the cloud
+Serverless is Service not servers
+How Azure Does Serverless
+Azure's Serverless Features
+	Compute:Azure Functions
+	Storage:blobs,tables,queues and files
+	Data:Cosmos DB,including SQL,MongoDB,Table and Gremlin
+	Security:Azure Active Directory
+	Messaging:Event grid,and service Bus
+	Work flow:Logic apps
+	API Management including Functions proxies
+	Analytics Stream analytics,and Event Hubs
+	Intelligence:Bot service,and Cogntive services
+Functions
+	a.Allows you to run code on demand without having to provision
+	  or manage infrastructure
+	b.Respond to a variety of events
+		Calls to a URL(HTTP)
+		Timed events
+		Github
+		Blob
+Why Functions?
+	a.Azure calls these piece of code "functions" because they act similar
+	  to programming functions
+	b.Functions start and finish
+	c.Functions have input and output
+Shoulds
+	a.Functions should be single-purpose bits of code that perform
+	  a single task
+	b.Functions should finish as quickly as possible
+	c.Functions should prefer asynchronous operation
+Code
+	Can write functions in your choice of language
+		C#,F#,Node.js,Java,PHP,Bash
+How Much ?
+	Two options(Choose at creation,can't change)
+	1.Pay only for the resources your code consumes
+		a.consumption plan
+		b.Azure will do the scaling
+	2.or put it in the App service plan
+		Alongside web,mobile or API apps
+		you are responsible for scale
+Triggers and Bindings
+	1.A trigger is something that can cause a function to run
+	2.A binding is an action that a function can use as input or output
+	3.you can bring your own SDK or API,and not even use the binding
+	  Microsoft offers
+Triggers(and Their Data)
+	a.Schedule
+	b.HTTP
+	c.Events from Event Hub
+	d.Storage Events(Blobs,Queues)
+	e.NoSQL DB from Cosmos DB
+	f.Microsoft Graph Events
+Input Binding
+	a.Storage(Blobs and Tables)
+	b.SQL Data
+	c.NoSQL Data from CosmosDB
+	d.Microsoft Graph(Excel,OneDrive,Events,Auth tokens)
+Output Bindings
+	a.Http output(if trigger was HTTP)
+	b.Storage(Blobs,Queues,Tables)
+	c.Events from Event Hub
+	d.Queues and topics from Service Bus
+	e.SQL Data
+	f.NoSQL Data from CosmosDB
+	g.Push notification
+	h.Twillio SMS
+	i.Sendgrid EMail
+	j.Microsft Graph(Excel,OneDrive,Outlook,email,Graph events)
+Overview of logic apps
+	1.Workflow-as-a-Service
+	2.A task progresses through a series of steps
+	3.you connect two applications together in a way that
+	  the original app creators did not envision
+Triggers
+	1.All logic apps are triggered by something
+	2.Triggers could be time based,or event based
+		a.Recurrence - timer based
+		b.Request -something calls it by HTTP
+		c.Polling HTTP - the logic app checks an HTTP endpoint for its trigger
+		d.Polling API - the logic app calls an API for it's trigger
+		e.Webhook HTTP - Similar to a request except it registers and unregister 
+		  itself
+		f.Webhook API - similar to webhook HTTP except it calls an API
+Actions
+	a.If the logic app is triggered,it then progress through a workflow
+	  which is a combination of actions
+	Actions can be
+		a.Branching based on condtions(if-then)
+		b.Looping an Azure API(i.e data or storage actions,or any)
+		c.Calling an external API
+		d.Invoking an Azure function 
+		e.Waiting for a period of time
+		f.Manipulating the data
+		g.Calling another logic app
+Azure Function UseCase
+	https://www.troyhunt.com/Azure-functions-in-practice
+	1.Experiments and prototyping
+	2.Automating development processes
+	3.Decomposing or extending monolthic applications
+	4.Independent scaling
+	5.Adapters for integrating systems
+	6.Go serverless!
+Creating Your First Azure Function
+	https://www.tryfunctions.com/try		  
+
+
+1.API apps features makes it easy to develop,host,and consume APIs in the cloud
+  and on-premises
+2.With API Apps,you can have enterprise grade security,simple access control,
+  automatic SDK generation and seanless integration with logic apps.
+Features
+	1.Bring your own existing API as-is-API can be developed in any langage
+	  framework supported by App service such as C#,Java,PHP,Node.js etc
+	2.Easy Consumption - integrted support for swagger API
+	3.Simple access control- Protect API app from unauthenticated access
+	  with no changes to your code
+	4.Visual studio integration
+	5.Integration with logic apps
+
+API management overview
+	1.API Management is about managing APIs.
+	2.You put an API Managemen front end on an API to monitor and throttle usage,
+	  manipulate input and output,consolidate several APIs into one endpoint and
+	  so forth.
+	3.The APIs being managed can be hosted anywhere 
+	4.API Apps is about hosting APIs
+	5.Http requests -> API Management -> Azure API apps 
+					   ->Azure API apps
+API management concepts
+	APIs and operations
+		a.Each API represents a set of operations available to developers
+	Products
+		a.Products are how APIs are surfaced to developers.
+		b.Products in API Management have one or more APIs,and are configured
+	 	  with a title,description,and terms of use
+	Groups:Groups are used to manage the visiblity of APIs
+		a.Administrator group members can manage API management service
+		  instances,creating the APIs,operations,and products that are used
+		  by developers
+		b.Developers group members are authenticated customers that build
+		  applications using APIs
+		c.Guests - Unauthenticated developer portal users,such as prosperctive 
+		  customers visiting the developer portal of an API Management
+		  instance fall into this group
+	Policies
+		a.Policies are a powerfull capability of API Management that allow the
+		  publisher to change the behaviour of the API throug configuration
+	
+Azure API Management
+	1.Cloud hosted,turnkey,fully managed
+	2.Works with APIs running in the cloud or on-prem
+	3.Abstracts,protects and optimize APIs
+	4.Promotes and supports app developer engagement
+	5.Provides API governance,insights,and analytics
+WHat is APi Management 
+	1.Manage all your APIs in one place
+	Backend API
+		an HTTP service that implements your API and its operations
+	Frontend API/APIM API 
+		a.it does not host APIs,it creates facades for your APIs in order
+		  to customize the facade according to your need without touching
+		  the back end API
+	APIM Product
+		a.A product contains one or more APIs as well ass a usage quota
+		  and the terms of use.
+		b.you can include a number of APIs and offer them to developers 
+		  through the Developer portal
+	APIM API Operation
+		a.it represents a set of operations available to devlopers.
+	Version
+		a.Sometimes you want to publish new or different API features 
+		  to some users while others want to stick with the API
+		  that currenlty works for them
+	Developer portal
+		a.your customers(developers) should use the Developer portal to
+		  access your APIs.
+		b.the developer Portal can be customized
+	Policy
+		a.A defination formatted as XML document describes a sequence of 
+		  inbound and outbound statements
+		b.The XML can be edited directly in the definition window
+Key concepts
+	1.Accept API calls and route them to your backends
+	2.Verifies API Keys,JWT tokens,certificates,and other
+	  credentials
+	3.Enforces usage quotas and rate limits
+	4.Transform your API on the fly without code modifications
+	5.Cache backedn responses where set up
+	6.Logs call metadata for analytics purposes
+The Azure portal
+	1.Define or import API schema
+	2.Package  APIs into products
+	3.Set up policies on the APIs
+	4.Get insights from analytics
+	5.Manage users
+The Developer portal
+	1.Read API documentation
+	2.Try out an API via the interactive console
+	3.Create an account and subscribe to get API keys
+	4.Access analytics on their own usage
+	5.Not available in Consumption plan
+Policies
+	1.Global Scope
+	2.Product Scope
+	3.API Scope
+	4.Operationa Scope
+		
+
+
+
+			
+
+		  
+	  
+	  
+			
+	
+
+
+	
+	
+			
+		
+				
+	
+	
+	
+					
+		
+
+
+
+
+
+		
+
+	
+	
+	
+	
+
+	
+	
+
+	
+		
+		
+		
+		
+
+					
+		
+	
+	
+
+			
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+	
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+	
+				
+			
+	
+			

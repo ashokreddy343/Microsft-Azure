@@ -1,0 +1,22 @@
+1.Custom Domain In Azure Web App
+2.Desktop App For Azure Portal
+	a.https://portal.azure.com/App/Download
+3.Creating Services With Azure Service Fabric
+	need to implement
+	https://www.c-sharpcorner.com/article/creating-services-with-azure-service-fabric/
+4.How To Pass AZ-900 Microsoft Azure Fundamentals Certification Exam 
+	https://www.microsoft.com/en-us/learning/azure-fundamentals.aspx
+	https://docs.microsoft.com/en-us/learn/browse/
+5.Azure keyvault
+	install these nuget packages
+		1.AppAuthentication
+		2.KeyVault
+	import the following code
+		1.using Microsoft.Azure.KeyVault
+		2.using Microsoft.Azure.KeyVault.Models
+		3.using Microsoft.Azure.Services.AppAuthentication
+	
+	
+
+
+	

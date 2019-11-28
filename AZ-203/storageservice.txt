@@ -1,0 +1,95 @@
+using EYCheckbox.Business.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.WindowsAzure; // Namespace for CloudConfigurationManager
+using Microsoft.WindowsAzure.Storage; // Namespace for CloudStorageAccount
+using Microsoft.WindowsAzure.Storage.Blob; // Namespace for Blob storage types
+using System.Configuration;
+using EYCheckbox.Common;
+
+namespace EYCheckbox.Business
+{
+    public class StorageService : IStorageService
+    {
+        private readonly string _connString = string.Empty;
+        private readonly string _destContainer = string.Empty;
+        private readonly string _blobUrl = string.Empty;
+        public StorageService(IConfigurationUtilityManager configurationUtilityManager)
+        {
+            _connString = "DefaultEndpointsProtocol=https;AccountName=acemnsdepwsral01;AccountKey=kbTYbm1h69/MzLz1xjSnUt+R+6t/MdqIb94aF7dgqBcEE+jqaskKXGyyRXqITfv2cbcTwhdIMvhSwNXd67ZgwQ==;EndpointSuffix=core.windows.net";
+            _destContainer = configurationUtilityManager.DestContainer;
+            _blobUrl = "https://acemnsdepwsral01.blob.core.windows.net/";
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="uniqueId"></param>
+        /// <returns></returns>
+        public string GetBlobWriteAccessUrl(string uniqueId)
+        {
+            var destContainer = uniqueId.ToLower();
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connString);
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            //Get container reference
+            CloudBlobContainer container = blobClient.GetContainerReference(destContainer);
+            container.CreateIfNotExists();
+
+            var sasPolicy = new SharedAccessBlobPolicy() { Permissions = SharedAccessBlobPermissions.Create | SharedAccessBlobPermissions.Write, SharedAccessExpiryTime = DateTime.UtcNow.AddMinutes(12), SharedAccessStartTime = DateTime.UtcNow.AddMinutes(-2) };
+            //var container = blobClient.GetContainerReference(_destContainer.ToLower());
+            // var directory = container.GetDirectoryReference(directoryName.ToLower());
+            //  var blob = directory.GetBlockBlobReference(blobName.ToLower());
+            string sas = container.GetSharedAccessSignature(sasPolicy);
+            return _blobUrl + destContainer + sas;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="blobName"></param>
+        /// <param name="uniqueId"></param>
+        /// <returns></returns>
+        public string GetBlobReadAccessUrl(string blobName, string uniqueId)
+        {
+            var destContainer = uniqueId.ToLower();
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connString);
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            var sasPolicy = new SharedAccessBlobPolicy() { Permissions = SharedAccessBlobPermissions.Read, SharedAccessExpiryTime = DateTime.UtcNow.AddMinutes(5), SharedAccessStartTime = DateTime.UtcNow.AddMinutes(-2) };
+            var container = blobClient.GetContainerReference(destContainer);
+            var blob = container.GetBlockBlobReference(blobName.ToLower());
+            return blob.Uri.AbsoluteUri + blob.GetSharedAccessSignature(sasPolicy);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="blobName"></param>
+        /// <param name="uniqueId"></param>
+        /// <returns></returns>
+        public byte[] GetBlobData(string blobName, string uniqueId)
+        {
+            var destContainer = uniqueId.ToLower();
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connString);
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            var sasPolicy = new SharedAccessBlobPolicy() { Permissions = SharedAccessBlobPermissions.Read, SharedAccessExpiryTime = DateTime.UtcNow.AddMinutes(5), SharedAccessStartTime = DateTime.UtcNow.AddMinutes(-2) };
+            var container = blobClient.GetContainerReference(destContainer);
+            //var blob = container.GetBlockBlobReference(blobName.ToLower());
+            CloudBlockBlob blob = container.GetBlockBlobReference(blobName.ToLower());
+            blob.FetchAttributes();
+            long fileByteLength = blob.Properties.Length;
+            Byte[] blobByteArray = new Byte[fileByteLength];
+            blob.DownloadToByteArray(blobByteArray, 0);
+            return blobByteArray;
+        }
+
+        public void DeleteBlobFile(string blobName, string uniqueId)
+        {
+            var destContainer = uniqueId.ToLower();
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connString);
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            var container = blobClient.GetContainerReference(destContainer);
+            var blob = container.GetBlockBlobReference(blobName.ToLower());
+            blob.DeleteIfExists();
+        }
+    }
+}

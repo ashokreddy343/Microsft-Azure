@@ -1,0 +1,92 @@
+web
+	1.App services
+	2.Api Managing services
+	3.CDN profiles
+	4.Search services
+	5.Notification Hubs
+	6.Notification Hub Namespaces
+	7.App service plans
+	8.App service Enviornments
+	9.API Connections
+	10.App Service Certificates
+	11.App Service Domains
+	12.Media Services
+	13.SignalR
+Compute
+	1.Virtual machines
+	2.Virtual machines(classic)
+	3.Virtual machine scale sets
+	4.container services(deperected)
+	5.Function App
+	6.App services
+	7.Container instances
+	8.Batch accounts
+	9.Service Fabric clusters
+	10.Mesh applications
+	11.Cloud services(classic)
+	12.Kubernetes services
+	13.Availability sets
+	14.Disks
+	15.Disks(classic)
+	16.Snapshots
+	17.Images
+	18.Os images(classic)
+	19.VM images(classic)
+	20.citrix virtual desktops essentials
+	21.Citrix Virtual Apps Essentials
+	22.SAP HANA on Azure(preview)
+Networking
+	1.Virtual networks
+	2.Virtual networks(classic)
+	3.Load balancers
+	4.Application gateways
+	5.Virtual network gateways
+	6.Local network gateways
+	7.DNS zones
+	8.Traffic Manager profiles
+	9.ExpressRoute circuits
+	10.Network watcher
+	11.Network security groups
+	12.network security groups(classic)
+	13.Network interfaces
+	14.Public ip addresses
+	15.public ip prefixes
+	16.Reserved Ip addresses(classic)
+	17.Connections
+	18.On-premises data gateway
+	19.Route tables
+	20.Route filters
+	21.Application security groups
+	22.DDo protection plans
+	23.Firewalls
+	24.Front Doors
+	25.Service endpoint policies
+	26.Virtual WANs
+Storage
+	1.Storage accounts
+	2.Storage accounts(classic)	
+	3.Recovery Service vaults
+	4.StorSimple Device Managers
+	5.Data Lake Storage Gen1
+	6.Storage Explorer
+	7.StorSimple Data Managers
+	8.Storage Sync Services
+	9.Import/export jobs
+	10.Data Box Edge/ Data Box Gateway
+	11.Data Box
+	12.Azure NetApp FIles
+Mobile
+	1.App services
+	2.Notification Hubs
+Containers
+	1.Container services(deprecated)
+	2.Container instances
+	3.Kubernetes services
+	4.Container registries
+	5.Batch accounts
+	6.Service fabric clusters
+	7.App services
+	
+	
+	
+

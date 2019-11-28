@@ -1,0 +1,270 @@
+https://app.pluralsight.com/paths/certificate/developing-solutions-for-microsoft-azure-az-203
+
+Function as a Service(FaaS)
+	a.A platform for running "functions",which are simply
+	  your code running in responses to an event
+Supported Languages
+	C#,Javascript,F#,Java,Python
+Triggers
+	Timer :run a function on a schedule
+	Message : listen for messages on a queue
+	HTTP Request : Implement web APIs or webhooks
+	Many more:Azure Storage blob creation,Cosmos DB new row
+Bindings
+	Queue,Cosmos DB,Blob Storage
+	Service Bus,Table Storage,SendGrid
+Serverless Archiecture
+	Servers are managed for you
+		-Servers are abstracted away
+	Pre-second billing model
+		-Only pay when your code runs
+		-Monthly free grant
+	Automatic scale
+		-Multiple servers meet demand
+Hosting Models
+	1.Consumption Plan(serverless)
+		Per-second billing
+		1,000,000 executions
+		400,000 GBs
+	2.App service plan
+		Reserved servers
+		Predictable monthly cost
+	3.Docker container
+		Run anywhere
+		on premises
+		Other cloud providers
+Development Enviornment
+	1.Azure Portal
+		Experiments
+		Proof of concept
+	2.Visual studio 2017
+		powerfull IDE
+		Azure functions extensions
+		Debug and test locally
+	3.Azure functions core tools
+		cross platform
+		Visual studio code
+		Azure functions extensions
+Additional Featurres
+	 Security
+		API Keys
+		Identity provider integration
+	Durable Functions
+		Define workflows
+		Runt tasks in parallel
+	Proxies
+		Route incoming requests
+		Static website
+		Transfrm requests and responses
+Function Apps
+	1.unit of deployment
+	2.SHare common configuration
+	3.Scale together
+	4.Logically related
+Creating Functions in the Azure Portal
+	Create function app 
+		Name:serverless-funcs-21
+		Subscription:Visual studio Professional
+		resource group:serverless-funcs-21
+		OS:windows/linux
+		Hosting plan
+			Consumption Plan
+			App service plan
+		Location
+		Runtime Stack
+			.net core
+		storage
+		Application Insights
+Demo :Creating a Function
+	Authorization level
+		Function -by default
+		Anonymous
+		Admin
+Demo:function.json
+	View files
+		function.json
+		run.csx
+Creating functions in the Azure Portal -Summary
+	Create a Function App
+		-consumption plan
+		-Application Insights
+	Create a function
+		-Test within the portal
+		-View invocation history
+	function.json
+		-defines triggers and bindings
+Create functions in Visual Studio
+	Supports creating Azure Function apps
+		C#,Javascript,F#
+	Intellisense
+	Debugging
+Demo:Creating Azure Function in Visual studio
+Test a function in visual studio
+Creating Functions with Visual studio code
+	Visual studio code
+		a.Visual studio 2017 is windows only
+		b.Visual studio code is cross-platform
+		c.Many extensions
+		d.Azure support
+	Azure Functions Core Tools
+		Command line tools
+			Creating new Function app
+			Adding functions
+			Deploying to Azure
+		Includes the azure functions runtime
+		Azure storage emulator
+	Demo:Using Azure Function Core Tools
+		func init
+		func new
+		func start
+Creating a REST API with Azure functions
+	Demo:Create Todo
+		static List<Todo> items = new List<Todo>();
+        [FunctionName("CreateTodo")]
+        public static async Task<IActionResult> CreateTodo(
+            [HttpTrigger(AuthorizationLevel.Anonymous,"post",Route ="todo")]HttpRequest req, ILogger log)
+        {
+            log.LogInformation("Creating a new todo list item");
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            var input = JsonConvert.DeserializeObject<TodoCreateModel>(requestBody);
+            var todo = new Todo() { TaskDescription = input.TaskDescription };
+            items.Add(todo);
+            return new OkObjectResult(todo);
+        }
+
+Demo:Get all todos
+	[FunctionName("GetTodos")]
+        public static  IActionResult GetTodos(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "todo")]HttpRequest req, ILogger log)
+        {
+            log.LogInformation("Getting todo list items");
+            return new OkObjectResult(items);
+        }
+
+Demo:Get Todo by Id
+	 [FunctionName("GetTodoById")]
+        public static IActionResult GetTodoById(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "todo/{id}")]HttpRequest req, ILogger log,string id)
+        {
+            log.LogInformation("Getting todo item by id");
+            var todo = items.FirstOrDefault(t => t.Id == id);
+            if (todo == null)
+            {
+                return new NotFoundResult();
+            }
+            return new OkObjectResult(todo);
+        }
+
+Demo:Update Todo Item
+	[FunctionName("UpdateTodo")]
+        public static async Task<IActionResult> UpdateTodo(
+           [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "todo/{id}")]HttpRequest req, ILogger log, string id)
+        {
+            log.LogInformation("updating todo item by id");
+            var todo = items.FirstOrDefault(t => t.Id == id);
+            if (todo == null)
+            {
+                return new NotFoundResult();
+            }
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            var updated = JsonConvert.DeserializeObject<TodoUpdateModel>(requestBody);
+            todo.IsCompleted = updated.IsCompleted;
+            if (!string.IsNullOrEmpty(updated.TaskDescription))
+            {
+                todo.TaskDescription = updated.TaskDescription;
+            }
+            return new OkObjectResult(todo);
+        }
+
+Delete Todo Item
+	[FunctionName("DeleteTodo")]
+        public static IActionResult DeleteTodo(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "todo/{id}")]HttpRequest req, ILogger log, string id)
+        {
+            log.LogInformation("Deleteinng todo item ");
+            var todo = items.FirstOrDefault(t => t.Id == id);
+            if (todo == null)
+            {
+                return new NotFoundResult();
+            }
+            items.Remove(todo);
+            return new OkResult();
+        }
+Demo:Test with postman
+Demo:Testing in a web page
+	enable cors in local.settings.json
+		{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+  },
+  "Host": {
+    "CORS": "*"
+  }
+}
+
+Working with Triggers and Bindings
+Triggers
+	HTTP Request,Timer,Blob,Queue,Cosmos DB,Service Bus
+Bindings
+	Input bindings	
+		Blob,Cosmos dB
+	Output Bindings
+		Queue,SendGrid
+	Defined in function.json
+Choosing a Database
+	Azure functions can connect to any database
+	Cosmos DB
+		1.Highly Scalable
+		2.Globally distributed
+		3.Document database
+		4.Multiple programming models
+		5.Not as chepap as other options
+		6.Maybe overkill for this API
+	Table Storage
+		1.Extremly cheap
+		2.Limited querying capabilities
+		3.Emulated by the Storage Emulator
+		4.Every function app already has a storage account
+		  in azure
+		5.Good choice for intial prototype
+		6.Can migrate to Cosmos DB later
+	public class TodoTableEntity : TableEntity
+    {
+        public DateTime CreatedTime { get; set; }
+        public string TaskDescription { get; set; }
+        public bool IsCompleted { get; set; }
+
+    }
+
+Demo:Using Table Storage
+	install nuget package
+		Microsoft.NET.Sdk.Funtions
+		Microsoft.Azure.WebJobs.Extensions.Storage
+Running Functions in Azure
+	Deploying Function Apps
+		Manual Deploy
+			Visual Studio or VS Code
+			Create a new Function App
+			Publish to an existing Function App
+		Git
+			Automated deployment
+			configure in portal
+			Github or Vsts
+		Zip
+			Kudu API
+			Azure Functions Core Tools
+			Azure CLI
+		
+
+		
+		
+	
+	
+							
+				
+		
+	
+			
+	

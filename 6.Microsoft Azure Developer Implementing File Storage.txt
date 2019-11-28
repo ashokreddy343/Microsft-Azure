@@ -1,0 +1,29 @@
+Introducting File storage
+	Features in SMB 3
+		Transparent Failover
+		Scale out
+		Multichannel
+		SMB Direct
+Reviewing storage account
+Creating a File Share
+	Three ways to Create a Storage Account
+		1.Portal -Easy low scalability
+		2.CLI - Scriptable Medium scalability
+		3.API - Powerful High Scalability
+CLI Storage Subgroups
+	az storage --help
+Creating a File Share Using the API
+	npm init -y
+	npm install ms-rest-azure-arm-storage azure-storage
+	touch index.js
+	code .
+Connecting to a File Share
+Demo :connecting to a file share
+Managing a File Share
+	az storage account --help
+	az storage file --help
+	az storage directory --help
+Managing Files Using the REST API
+	
+				 
+			

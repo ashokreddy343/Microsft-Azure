@@ -1,0 +1,193 @@
+Azure Redis Cache options
+	1.Overview
+		resource group
+		Host Name
+		Status
+		Ports
+		Location
+		keys
+		subscription
+		Best practices
+		Subscription Id
+		New features
+	2.Activity log
+	3.Access control(IAM)
+	4.Diagnose and solve problems
+	settings
+		Access keys
+			primary
+			secondary 
+			Primary connection string (StackExchange.Redis)
+			Secondary connection string (StackExchange.Redis)	
+		Advanced settings
+		Cache Advisor
+		Scale
+		Cluster size
+		Data persistence
+			RDB
+			AOF
+		Schedule updates
+		Geo-replication
+		Virtual network
+		Firewall
+		Properties
+		Locks
+		Export template
+	Administation
+		import data
+		export data
+		Reboot
+	Monitoring
+		alerts
+		Metrics
+		Diagnostic settings
+	Support+troubleshooting
+		a.Resource health
+		b.New support request
+	
+Introduction
+Why would you cache data ?
+	1.To increase perfor
+mance
+	2.To increase availability
+What is Caching ?
+	1.In-Memory
+		Key/value pairs
+Caching Considerations
+	1.Pick the right data to be cached
+		a.Simple data
+		b.Data that is accessed often and
+		  doesn't change often
+	2.Invalidation policy
+		a.Set the right policy
+		b.Balance between performance & consistency
+	3.To optimize performance
+		a.Pre-populate the cache
+		b.Pick which data to pre-populate
+	https://github.com/bmaluijb/NationalCookies
+
+Implementing Azure Redis Cache
+What is Azure Redis Cache ?
+	1.Provides in-memory data for optimal speed
+	2.Fully managed
+	3.Based on the open-source redis cache
+	4.Stores data in :
+		Strings,hashes,lists and sets
+	Advanced features
+		a.Geo-replication(high availability)
+		b.Cluster(more performance)
+		c.Data persistence(backups)
+		d.Azure Redis Cache Cluster
+	Azure Redis Cache Data Types
+		1.strings(max 512MB)
+			Append
+			Incr,Decr
+		2.Lists(ordered by sequence)
+			First string
+			Second string
+			third string
+		3.Sets(only unique values)
+		4.Hashes(unordered)
+Demo:Connecting to Azure Redis Cache from the web application
+	1.install nuget package
+		Microsoft.Extensions.Caching.Redis			
+	2.services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = Configuration.GetConnectionString("RedisConnection");
+                option.InstanceName = "master";
+            });
+	3.Install Newtonsoft.Json
+	
+Implementing a cache Invalidation policy
+Demo :implementing a cache invalidation policy
+	1.DistributedCacheEntryOptions options = new DistributedCacheEntryOptions();
+        2.options.SetAbsoluteExpiration(new System.TimeSpan(0, 0, 15));
+        3._cache.SetString("cookies", JsonConvert.SerializeObject(cookies),options);
+Things to Remeber
+	Azure Redis Cache is fully managed
+		a.Geo-replication(high availailtity)
+		b.Cluster(more performance)
+		c.Data persistence(backups)
+		d.Stored data in 
+			a.strings,lists,hashes and sets
+			b.Depends on client library
+	Connect to Azure Redis cache
+		a.Microsoft.Extensions.Caching.Redis for asp.net core
+		b.StackExchange.Redis for general purpose
+	Invalidate cache data
+		-Manually
+		-Let the cache do it
+		  -By setting an invalidation policy
+Using Redis Cache for session state
+	Implement Redis Session State provider
+		1.Microsoft.Web.RedisSessionStateProvider
+Things to Remeber
+	Storing state in local memory
+		-Doesn't work when you scale
+		-Doesn't work when you run on a different
+		 server
+	Use a distributed cache instead
+		-External to your application
+		-Very performant
+	Implement Session State Provider
+		-Install Microsoft.Web.RedissessionStateProvider
+		-Connetion details in web.config
+		-Mark objects as [serializable]
+Testing the performance Benefits of Caching
+	How can we measure Performance
+Things to remeber
+	why
+		To Increase performance
+		To increase availability
+	what
+		In-memory fully managed
+		Geo-replication
+		cluster
+		Data persistence
+	How ?
+		Microsoft.Extensions.Caching.Redis for ASP.NET Core
+		StackExchange.Redis for general purpose
+Where to go next ?
+	Azure Redis Cache documentation
+		https://docs.microsoft.com/en-us/azure/redis-cache/
+	Redis Cache documentation
+		https://redis.io/documentation
+	Redis cache data types
+		https://redis.io/topics/data-types
+	
+connecting to sql server
+	 services.AddDbContext<CookieContext>(options =>
+ options.
+		UseSqlServer(Configuration.GetConnectionString("CookieDBConnection")));
+
+public class CookieContext : DbContext
+    {
+
+    
+    public CookieContext(DbContextOptions options) : base (options)
+      
+  {
+            
+        }
+
+        
+public CookieContext()
+        
+{
+           
+        }
+
+        
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+        
+{
+
+      }
+
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderLine> OrderLines { get; set; }
+        public DbSet<Cookie> Cookies { get; set; }
+    }
+	
+
+		

@@ -1,0 +1,48 @@
+Install web server
+	Install-WindowsFeature -name Web-Server -IncludeManagementTools
+Create a Windows virtual machine in Azure with PowerShell
+	Create Resource Group
+		1.A resource group is a logical container into which Azure
+		  resources are deployed and managed.
+		2.New-AzResourceGroup -Name myResourceGroup -Location EastUS
+	Create Virtual Machine
+		New-AzVm `
+			-ResourceGroupName "myResourceGroup"`
+			-Name "myVM"`
+			-Location "East US"`
+			-VirtualNetworkName "myVnet"
+			-SubnetName "mySubnet"
+			-SecurityGroupName "myNetworkSecurityGroup" `
+			-PublicIpAddressName "myPublicAddress"`
+			-OpenPorts 80,3389
+	Connect to Virtual machine
+		To see the public IP addess of the VM,use the Get-AzPublicIpAddress
+		Get-AzPublicIpAddress -ResourceGroupName "myResourceGroup" | Select "IpAddress"
+		Get-AzPublicIpAddress -ResourceGroupName "myResourceGroup" | Select "168.62.48.109"
+		mstsc /v:168.62.48.109
+	Install web server
+		Install-WindowsFeature -name Web-Server -IncludeManagementTools
+	Clean up resources
+		Remove-AzResourceGroup -Name myResourceGroup
+Create a Windows virtual machine with the Azure CLI
+	Create a resource group	
+		1.az group create --name myResourceGroup --location eastus
+	Create virtual machine
+		az vm create \
+		  --resource-group myResourceGroup \
+		  --name myVM \
+		  --image win2016datacenter \
+		  --admin-username azureuser \
+		  --admin-password myPassword
+	Open port 80 for web traffic
+		az vm open-port --port 80 --resource-group myResourceGroup --name myVM
+	Connect to virtual machine
+		mstsc /v:public ip address
+	Install web server
+		Install-WindowsFeature -name web-server IncludeManagementTools
+	Clean up resources
+		az group delete --name myResourceGroup
+https://docs.microsoft.com/en-us/azure/virtual-machines/windows/				
+	
+		
+			

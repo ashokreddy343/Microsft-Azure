@@ -1,0 +1,59 @@
+What is a NoSQL Database?
+	Distributed
+		Replicas ensure high thorughput/availability,
+		and low latency
+	Scale-out
+		a.Horizontal partitioning enables virutally limitless
+		  storage and throughput
+	Schema-free
+		a.Document,table,graph,and columnar data models
+What is Cosmos DB?
+	Evolution of DocumentDB
+		1.Scalable NoSql document database low latency
+		  (singl-digit millisecond)
+	Virtually unlimited scale
+		a.Scale storage with server-side partitioning scale
+		  throughput with variable request units
+	Tunkey global distibution
+		a.point-and-click over where your data gets geo-replicated
+	Multi-model/Multi-API
+		a.No longer exclsively a document database also 
+		  supports tables,graph,and columnar
+		b.JSON(SQL API)
+		c.BSON(mongoDB API)
+		d.Graph(gremlin API)
+		e.key-value(table API)
+		f.columnar(Casandra-API)
+Creating a Cosmos DB Acccount
+Introducing the local emulator for cosmos db
+Creating a collection
+Multiple APIs and Data Models
+	Document
+		SQL API(JSON)
+		MongoDB API(BSON)
+	Key-value
+		table api
+			replaces azure table storage
+	Graph
+		Gremlin API
+			graph traversal language
+	Columnar
+		Cassandra API
+	Internally azure cosmos db stored as
+		Atom Record Sequence
+Tuning for Throughput and Performance
+	Latency
+		How fast is the response for a given request ?
+	Throughput
+		How many requests can be served within a specific period of time ?
+Throughput Currency
+	a.Blended measure of computational cost
+	  (CPU,memory,disk,I/O,network I/O)
+All Requests are Not Equal
+	a.Every Cosmos DB response header shows the RU
+	  charge for the request
+Request Units are Deterministic
+	a.The same request will alwasy require the same number
+	  of request units
+					
+					

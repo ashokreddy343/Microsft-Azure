@@ -1,0 +1,15 @@
+Microsoft Azure Storage 
+	Durable
+	Highly Available
+	Secure
+	Scalable
+	Accessible
+	Cost Effective
+Azure Storage Services
+	Blob Storage
+		Object and Disk storage
+		
+
+
+Install-WindowsFeture -Name web-server,Web-Mgmt-Tools
+	

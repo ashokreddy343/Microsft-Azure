@@ -1,0 +1,36 @@
+Azure CDN Overview
+Azure CDN Feat tures
+	1.Distributed network close to end-users
+	2.Massively scaled,high performance networks
+	3.Standard & premium pricing tiers
+Benefits of Using Azure CDN with Storage
+	Optimization
+		1.Azure CDN is designed to serve content  efficently and saves
+		  on blob transfer costs
+	Storage Costs
+		1.Only charged for data transfer between Azure CDN servers
+		  and storage
+Pricing by Example
+	1.Azure Storage LRS Blob Account
+	2.10 files stored 1.2MB total
+	3.All data transfer occurs in Zone 1 (Americas)
+	4.All content is cached with maximu age and remains 
+	  unchanged
+	Without CDN
+		a.1.2MB (10 files ->1 MM requests from Azure blob storage
+		b.Storage $0.02/GB per montth
+		c.Storage Read $0.004/10,0000 requests
+		d.$4 per month (approxmiately)
+Demo:Serving Static Files from Azure Storage
+	https://github.com/kamranayub/pluralsight-azure-cdn-with-storage
+Azure CDN and Storage Concepts
+	1.Azure CDN provides high-performance and scalble benefits
+	  when serving content
+	2.Azure CDN is billed by data transfer amount varying by Azure Zone
+	3.Costs can be reported on in high-or low-level detail
+	  within the Azure Portal
+	4.Static files can be hosted on plain Azure Blob Service
+		
+NationalCookiewithoutredis
+NationalCookiewithredis
+

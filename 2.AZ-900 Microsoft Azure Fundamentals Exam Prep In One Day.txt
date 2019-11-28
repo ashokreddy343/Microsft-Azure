@@ -1,0 +1,262 @@
+Understanding Cloud concepts
+High Availability
+	1.Expressed as a percentage it's the availability of a system to respond
+	  to users
+	2.99.99% 
+Scalability
+	1.The ability of a system to handle growth of users or work
+Elasticity
+	1.The ability of a system to automatically grow and shringk based on 
+	  application demand
+Agility
+	1.The ability to change based on changes to market
+	  or envirnment
+Fault Tolerance
+	1.The ability of system to handle faults like power,
+	  networking,or hardware failures
+Disaster Recovery
+	1.The ability of a system to recover from failure within a
+	  period of time,and how much data is lost
+Economies of Scale
+	1.It's cheaper for Microsoft to run a server than you can
+	  ever achieve yourself
+Capital Expenditure(CapEx) and Operational Expenditure(OpEx)
+	1.CapEx is money invested in assets(like computers) that
+	  return investment over time
+	2.OpEx is money spent every day on operating expenses
+Consumption-Based Model
+	Pay per minute
+	Pay per hour
+	Pay per execution
+Paradigms for hosting applications -IaaS,PaaS,SaaS
+Infrastructure-as-a- Service(IaaS)
+	Virtual machines,networking,load balancers,firewalls  
+Platform-as-a-Service(PaaS)
+	1.Upload code packages and have them run,without access to the
+	  hardware
+Software-as-a-Service(SaaS)
+	Access to configuration only
+Public,private and hybrid clouds
+public cloud
+	1.computing services offered over the public internet
+	  anyone can sign up
+Private cloud
+	1.Computing services offered to only select useres;internal or 
+   	  corporate cloud
+Hybrid cloud
+	1.Combination of public and private clouds;scale private infrastructure to
+	 the cloud
+Cloud Concepts Quiz
+1.Financially speaking, one of the benefits of using cloud computing over hosting applications yourself on 	  servers you own is..								
+	ans.the tax and cash flow benefits of using Operational Expenditure(OpEX) instead of 
+	 	    Capital Expenditure(CapEX)
+2.What is the principle of Economies of Scale?	
+	The more of something you buy,the cheaper it is own and operate per unit
+3.How many minutes per month of downtime is 99.99% availability?
+	-4 minutes
+	-99.99% equates to 4 minutes per month
+4.When using the term "public cloud", what is it that makes it public versus private?
+	-anyone with a credit card can sign up for public cloud computing.
+	 there is generally no restriction on who can be a customer
+	-yes,public cloud is available for all
+5.Which cloud computing model does a virtual machine fall into?
+	-Infrastructure as a service
+
+Understanding core Azure services(30-35%)
+Regions
+	1.54-Regions-not all accessible by everyone
+	2.140 available in 140 countries
+Avalability zones
+Resource Groups
+	the way we organize resources
+Azure Resource Manager(ARM)
+Core Azure Products
+	Compute
+		Virtual machines
+		Virtual machine scale sets
+		App service
+		Functions
+		container instances
+		batch accounts
+		Service fabric clusters
+		Mesh applications
+	Networking
+		1.Virtual network
+		2.Load Balancer
+		3.VPN Gateway
+		4.Application Gatewaty
+		5.Content Delivery Network
+	Storage
+		Azure Storage - Blob,File,Table,Queue
+		Managed Disk
+		Backup and Recovery Storage
+	Databases
+		CosmosDb
+		Azure SQL Database
+		Azure Database Migration service
+		Azure SQL Data warehouse
+	Azure MarketPlace
+Core Azure Solutions
+	Internet of Things
+		IOT Fundamentals
+		IOT Hub
+		IoT Central
+	Big Data and Analytics
+		SQL Data Warehouse
+		HDInsight
+		Data Lake Analytics
+	Artifical Intelligence(AI)
+		Azure Machine Learning Service
+		Studio
+	Serverless
+		Azure Functions
+		Logic Apps
+		App grid	
+	Azure Management Tools
+		Azure CLI
+		PowerShell
+		Azure Portal
+	Azure Advisor
+Core Azure Servies Quiz
+1.Azure claims there are 54 regions. But when I create my account, 
+  I can only see 30 or so. What happened to the other regions?	
+	ans:Azure Government,Azure Germany and Azure China require separate
+	    accounts to access
+2.Which of Azure's architectural components allows you to specify exactly 
+  which data center in a region a virtual machine resides?				
+	ans:Availability Zones
+3.Which of the following Azure services is NOT part of the compute services?
+	Virtual Networks
+4.What is the function of a load balancer?
+	ans:it diverts traffic between  two or more servers to evenly distribute the load among
+	    several servers.it allows you to add additional servers to increase
+	    capacity without downtime
+5.Where do you find virtual machine images provided by third party companies within the Azure Portal?
+	In the Azure Marketplace
+
+Understand security,privacy,compliance,and trust(25-30%)
+Securing network connectivity
+	Azure Firewall
+	Azure DDoS Protection
+		always on monitoring
+		automatic mitigation for L3/L4 attacks
+		L7 protection with application gatway web application firewall
+		globally deployed
+		Protection policies tuned to yout VNet
+		Logging,alerting,and telemetry
+		Resource cost scale protection
+	Network Secuirty Group(NSG)
+	Choose an appropriate Azure security soltion
+		1.all virtual network subnets should use NSG
+		2.it's strong lock on windows and doors that you don't use
+		3.DDoS -as needed or after attacked
+		4.application gateway with WAF
+Azure Identity Services
+	the difference between authentication and authorization
+	Authenication
+		a.Authentication is a user proving who they are user id and password
+	Authorization
+		a.Authorization is ensuring that a user is permitted to perform an action
+	Move away from all authenticated users having admin access
+Azure Active Directory
+	1.Identity as a service(IDaaS)
+	2.Microsoft's preferred solution for identity management
+	3.Complete solution for managing users,groups,roles
+	4.Single-sign on
+	5.Synchronize with your corporate AD
+Azure Multi-Factor Authentication
+	1.first factor is your user id -might be easy to guess
+	2.Second factor is your password-hopefully hard to guess
+	3.third factor is that you have your phone on you
+	4.SMS,authentication app,phone call
+Security tools and features
+	Azure Security
+		Physical vs digital security
+		Shared security model
+	Azure AD
+	Role-Based Access Control(RBAC)
+	Layered approach
+	Security Layers
+		Data - virtual network endpoint
+		Application - API Management
+		Compute - Limit Remote Desktop access,winods update
+		Network - NSG,use of subnets,deny by default
+		Permeter - DDoS,firewalls
+		Idnetity & access - Azure AD
+		Physical - Door locks and key cards
+	Azure Security Center
+		Unified security management and advanced threat protection
+	Free tier and standard tier
+	Key Vault
+		1.Central,secure repository for your secrets,certificates and keys
+	Azure Information Protection(AIP)
+		1.Apply labels to emails and documents
+		2.COnfidential,Super Confidential Top Secret
+	Azure Advanced Threat Protection(ATP)
+		1.Monitor and profile user behaviour and activites
+		2.Protect user identities and reduce the attack surface
+		3.Identify suspicious activities and attacks
+		4.Investigate alerts and user activites
+Azure governance methodologies
+	Governance
+		1.Create rules across all of your azure resources
+		2.Evaluate compliance to those rules
+	Examples of Built-In Policies
+		1.Require SQL Server 12.0
+		2.Allowed Storage Account SKUs
+		3.Allowed Locations
+		4.Allowed Virtual Machine SKUs
+		5.Apply tag and its default value
+		6.Not allowed resource type
+	Can create custom policies using JSON definition
+	Policy Initiavates
+		1.A set of policies,grouped together
+		2.Every resource and resource group must have these 
+		  five tags
+		3.10 policies that need to be enforced
+		4.Grouped together as a policy initiative
+	Role-Based Access Control(RBAC)
+		1.Create roles that respesent the common tasks of the job
+		2.Accountant,Developer,Business Lead
+		3.Assign granular permissions to that role
+		4.Assign users to that role
+		5.Do not assign granular permissions to an individal
+	Built-in roles
+		Reader
+		Contributor
+		Owner
+	Locks
+		1.Read only 
+		2.can not delete
+	Using RBAC,you can restrict who has access to locks
+	Azure Advisor security assistance
+Monitoring and reporting options
+	Azure Monitor
+	Azure Monitor vs Azure Service
+		1.Azure Monitor collects all the data for you to analyze 
+		  and create alerts on
+		2.Specific to your application,your actions
+		3.Azure Service Health are general alerts across all of 		
+		  Azure
+Privacy,compliance and data protection standards
+	1.Compliance terms such as GDPR,ISO and NIST
+	2.Microsoft claims to be in compliance with many of them
+	3.And has tools to help you be in compliance with others
+	General Data Protection Regulation(GDPR)
+		a.GDPR is a new set of rules designed to give EU citizens more control over their
+		  personal data
+		b.affects companies outside of the EU that handle EU citizens' data
+	ISO 9001:2015 is for Quality Management Systems(QMS)
+	ISO/IEC 20000-1:2011 is for Service Management Systems(SMS)
+	NIST Cybersecurity Framework(CSF)
+	Microsoft Privacy statement
+		privacy.microsoft.com
+
+		
+				
+		
+		
+			
+	
+
+			

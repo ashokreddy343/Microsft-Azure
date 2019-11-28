@@ -1,0 +1,60 @@
+Introduction
+Why Choose Azure Table Storage ?
+	a.Low latency
+	b.Sclable Apps & High Availability
+	c.Flexible data structure(No sql)
+Azure Table Storage Overview
+	a.NoSQL
+	b.Key-value storage
+	c.Uses JSON to serialize the data
+	d.Flexible schema changes
+	e.Scalable and highly available
+	f.Single region with optional secondary read-only region
+Different Azure Table Storage Options
+	Azure Table Storage
+		1.No global distribution
+		2.Additional read-only region
+		3.Low latency
+		3.Can only index using a primary key
+		4.Eventual consistentcy using a second region
+		5.Price optimized for storage
+	Azure Cosmos DB Table API
+		1.Turnkey global distribution
+		2.Low latency,single digit msec latency
+		3.Guaranteed low latency at 99th percentile,worldwide
+		4.No schema or index management
+		4.Can index on any property(automatic)
+		5.Always on with 99.999% availabiity 
+		6.Elastic scalability if throughput and storage,worldwide
+		7.Precisely defined,multiple consistency choices
+		8.Price optimized for throughput
+	azure table storage demo
+		generate SAS token(Shared Access Token)
+			-connection string
+			-SAS token
+			-Table service SAS URL
+Using the Table Service REST API - Demo
+Demo:Migrating to Azure Cosmos DB Table API
+	Azure Cosmos DB Data Migration Tool
+Introducing Azure Table Storage - Summary
+	1.Introuduction to Azure Table Storage
+	2.Benfits of Choosing Azure Table Storage
+	3.Preparing the Azure Table Storage
+	4.Table Storage vs Cosmos DB Table API
+Integrating with Azure Table Storage
+	Microsoft.Azure.Cosmos.Table
+Summary-Integrating with Azure Table Storage
+	1.How to use Azure Table Storage in a .NET Application
+	2.Performing CRUD operations
+	3.Generate Shared Access Signataures for Table Storage and Cosmos DB Table API
+	4.Enforcing Access Policies with Shared Access Signatures
+	5.Exporting Metrics
+
+				
+
+
+	
+
+
+	
+	

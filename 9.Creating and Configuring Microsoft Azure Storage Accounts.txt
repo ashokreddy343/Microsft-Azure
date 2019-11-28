@@ -1,0 +1,26 @@
+Microsoft Azure Storage
+	1.Durable
+	2.Highly Available
+	3.Secure
+	4.Scalable
+	5.Accessible
+	6.Cost Effective
+Azure Storage Services
+	Blob Storage
+	File Storage 
+	Table Storage
+	Queue Storage
+
+
+
+
+
+
+
+
+
+
+
+
+
+

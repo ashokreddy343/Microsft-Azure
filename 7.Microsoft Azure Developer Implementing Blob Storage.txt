@@ -1,0 +1,63 @@
+Get Started with Azure Storage
+	Blob Storage
+	File Storage
+	Table Storage 
+	Queue Storage
+		Azure service bus
+		Azure Event Hubs
+		Azure Event Grid
+	single azure storage account(500 TB) 
+		if we contact azure team up to 5PB via azure support
+	we can create upto 200 storage accounts
+	accessible via REST APIs,client libraires and tools
+Create an Azure Storage Account in the Azure Portal
+	Account Kind
+		StorageV2(general purpose v2)
+			it's available all storage services
+				blobs,files,queues,tables
+		Storage(general purpose v1)
+		BlobStorage
+	Replication
+		1.Read-access-gero-redunadant storage(RA-GRS)
+		2.Zone-redundant storage(ZRS)
+		3.Locally-redundant storage(LRS)
+		4.Geo-redundant storage(GRS)
+	Performance
+		standard
+			magentic disks
+		premium
+			ssd disks
+	Access tier
+		Hot
+			frequent access data
+		Cool
+			Infrequent access data
+Understand Blob Containers and Blobs
+Create a Blob container and upload a blob
+	new container
+		name
+			images
+		public access level
+			1.Private (no anonymous access)
+			2.Blob(anonymous read access for blob only)
+			3.Container(anonymous read access for container and blobs)
+	Blob Type
+		Block blob
+		page blob
+		Append blob
+Know the different blob types
+	Block blob
+		1.we can replace whole binary file
+		2.logo.png
+		3.movies.mp4 				
+	Append blob
+		1.we don't want replace file we can append data to existing file
+		2.ex errors.log
+	Page Blob
+		1.other than these we can use page blob
+		2.we can store virtual machine hard disks
+		3.ex vm0001.vhd
+Calculate the costs for your storage account
+Uploading Blobs from .net
+				
+		

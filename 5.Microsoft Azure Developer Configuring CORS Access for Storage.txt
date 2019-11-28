@@ -1,0 +1,97 @@
+CORS Concepts
+	All CORS requests must include origin header
+Common CORS Headers
+	Request
+		Origin
+		Access-Control-Rquest-Method
+		Access-Control-Request-Headers
+	Response
+		Access-Control-Allow-Origin			
+		Access-Control-Allow-Methods
+		Access-Control-Allow-Headers
+		Access-Control-Allow-Credentials
+		Access-Control-Max-Age
+CORS in the browser
+	Enable CORS using crossorigin
+		<img crossorigin src=""/>
+	Triggering Pereflighted Requests
+		a.Applied to outgoing requests that contain custom headers,
+		  non-simple content types,or methods like PUT,PATCH and DELETE
+		b.https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+	CORS is not an authentication mechanism
+Using CORS with Azure Storage
+	1.Multiple origin support
+	2.Separate rules per service
+	3.Partial matching with headers
+	4.Set allowed max age,headers and methods
+CORS Limitions in Azure Storage
+	1.No premium storage support
+	2.5 rules per service
+	3.Max of 2 KB
+	4.256 character limitation on header and origin names
+	5.Max of 64 literal headers
+	6.Max of 2 partial headers
+Configuring Azure Storage CORS Rules
+	CORS Rules concepts
+		Allowed Origins
+			can be list of comma-separated origin hostnames
+			Can be a single * wildcard value
+			Must be exact case-sensitive match
+			<AlloedOrigins>
+				https://contoso.com,https://visitcontoso.com
+			</allowedorigins>
+		Allowed Methods
+			a.The allowed HTTP request verbs(methods)
+			b.Comma-separated
+			c.Can be any of :DELETE,GET,HEAD,POST,OPTIONS AND PUT
+		Allowed Headers
+			1.Comma-sepearated literal or wildcard-prefixed header names
+			2.Can also be single wildcard(*) value to allow any
+		ExposedHeaders
+			<ExposedHeaders>
+				x-ms-meta-*,x-request-duration
+			</ExposeHeaders>
+			1.Sent in the Access-Control-Expose-Headers response header
+			2.Comma-sepearate list of literal or widlcard-prefixed header names
+		Max Age in Seconds
+			<MaxAgeInSeconds>180</MaxAgeInSeconds>
+			1.Amount of time browser should cache the preflight OPTIONS request
+			2.Sent in the Acccess-Control-Max-Age response header
+			3.Reduces amount of billed preflight requests
+Evalution Logic
+	1.Azure will stop evaluating rules after a successful
+	  origin + method match
+	2.List rules in most restrictive to least restritive
+	  order
+Vary Header logic
+CORS with Storage Services
+Configuring CORS Using the AzureRM powershell SDK
+	Login-AzAccount
+	Set-AzContext -Sub
+	Get-Help *Az*Storage*
+Configuring CORS Using Azure CLI
+	az login
+	az account set
+	az storage cors list --help
+	az storage cors clear --services b
+Configuring CORS using the azure storage service rest api
+	1.Using postman with Azure REST APIs
+	2.Setting rules on storage services
+	2.Testing rules
+Special Considerations for ARM Templates
+	1.Some Azure Storage properties including CORS rules
+	  cannot be set in Azure ARM templates
+	ARM Templates with Storage SDKs
+		1.Create an ARM template for Storage accounts
+		2.Deploy ARM template
+		3.Run storage SDK commands against newly Created account
+Wrap up and What's Next
+	1.CORS rule evaluation has nuances that are important to be 
+	  aware of
+	2.Corss-platform azure tooling for developers and operations
+	3.CORS requests can be evaluated using Postman
+	4.ARM templates do not yet support some storage service properties
+	
+						 
+	
+	

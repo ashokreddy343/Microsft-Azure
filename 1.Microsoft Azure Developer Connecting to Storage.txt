@@ -1,0 +1,104 @@
+Network Security
+	connection Types
+		Public Endpoint
+			-internet facing
+			-Service Endpoint-Virtual Network(VNET)Facing
+			-Internal VNET Endpoint-Resource is inside the VNET
+	proper firewall setting are critical for public endpoint services
+	Different service Names
+		https://****.core.windows.net
+		TCP:***database.windows.net,port 1433
+		TCP:***.redis.cache.widnows.net,port 6380
+	Authentication and Authorization
+Connecting to Azure Storage
+	1.Highly available,secure,durable,scalable,and redundant
+	inlcudes these services
+		a.Tables
+		b.Queues
+		c.Files
+		d.Blobs
+	service names
+		a.https://****.table.core.windows.net		
+		b.https://****.queue.core.windows.net
+		c.https://****.file.core.windows.net
+		d.https://****.table.blob.windows.net
+	Network Security Options
+		Public Endpoint
+	Authorizing Access
+		1.Azure Active Directory(AAD)
+			a.Role-based access control
+			b.Users,Groups or Applications
+			c.High security with ease of use
+		2.Shared Keys
+			a.Root password of the storage account
+			b.There are alwasy 2 active keys
+			c.No identity authentication
+			d.Shared Keys should not be used unless absolutely 
+			  necessary
+		3.Shared Access Signature(SAS) Token
+			a.Does not authenticate an identity
+			b.Granular control over the access granted
+			c.Configurable parameters
+			d.Can be revoked
+		4.Anonymous Access
+			a.Anonymous access is read-only
+			b.Network security is still verified
+			c.No identity or authorization check
+	Azure AD should be used over SAS tokens whenever possible
+	Demo
+		azure storage explorer
+Connecting to Azure Databases
+	Offerings
+		a.Azure SQL Database(single database and elastic pools)
+		b.Azure SQL Managed Instance
+	Service Name
+		a.Protocol:TCP
+		b.Port:1433
+		c.Server name:****.database.windows.net
+		d.Database name
+	Network Security Options
+		a.Proper firewall configuration is critical,especially
+		  for public endpoint databases
+	Authentication and Authorization
+		a.Azure AD should be used over SQL Authentication
+		  whenever possible
+		b.SQL Database closes connections that remain idle
+		  for more than 30 minutes
+	Available Permissions
+		1.Server
+		2.Database
+		3.Object(tables,views,stored procedures)
+	Sql Database Built-in Server roles
+		1.Administrator
+		2.Login Manager
+		3.Database Creator
+Connecting to Azure Databases - Summary
+	1.The services include public,VNET service endpoints and VNET placement
+	2.Authentication and authorization can be done through AAD or SQL
+	  Authentication
+	3.Lots of options in terms of controlling permissions
+	4.Put it all together to connect SSMS to Azure SQL Database
+Connecting to Redis Cache
+	Redis Cache
+		A high-throughput,low-latency,secure managed service of this
+		open-source of this open-source in-memory cache
+	Tiers
+		Basic,Standard,Premium
+	Service Name
+		Protocol:TCP
+		Port:6379 or 6380 (SSL)
+		Server name:*****.redis.cache.windows.net
+	As a security best practice,do not enable non-SSL port connections
+	Authentication and Authorization
+		Store Shared Keys securely as they provide full access to your cache
+	Secure Connection with Redis CLI
+		Tools
+			Redis CLI
+			stunnel
+Connecting to Redis Cache-summary
+	1.The service includes public endpoint or VNET placement
+	2.Access authorization is done through Shared Keys
+	3.Redis CLI is a popular utility to interact with a Redis cache
+	4.Put it all together to connect Redis CLI to Azure Redis Cache
+		
+	

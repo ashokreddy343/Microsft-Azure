@@ -1,0 +1,149 @@
+Benefits and Considerations of Using Cloud Services
+High Availability
+	1.An agreed level of operational performance
+	2.Hospitals and data centers require high avalability
+	3.Downtime referes to periods when a system is unavailable
+Load Balancers in Azure
+	1.scale your applications and create high availability for services
+	2.support inbound and outbound scenarios
+	3.provides low latency and high throughput
+	4.Scales up to millons of flows for all tcp and udp applications
+Scalability
+	1.App/Infrastructure can expand to meet needs
+	Four General areas that scalability can apply to
+		a.Disk I/O
+		b.CPU
+		c.Memory
+		d.Network I/O
+	Two main ways of scaling
+		Horizontal
+		Vertical
+Vertical Scaling
+	1.Considered the easier of the two methods
+	2.adds more power to an existing instance
+	3.can mean more memory,faster storage,or more pwoerful cpu
+	4.Considered easier because hardware upgrades are easy
+	  on cloud platforms
+	5.very little added configuration required to scale up
+Horizontal Scaling
+	1.More complex than vertical scaling
+	2.Add more servers to spread the load across multiple
+	  machines
+	3.More servers mean more general administration tasks
+	4.must sync application,data,and bacups across multiple
+	  instances
+Vertical vs Horizontal scaling
+	1.Horizontal scaling is often considered a long term advantage
+	2.Vertical scaling is usually considered a short advantage
+Virtual machine scale set in Azure
+	1.Create And Manage groups of identical,load balanced VMs
+	2.Number of Vm instances can automatically increase or decrease in response to demand 
+	  or a defined schedule
+	3.Provide High availabilit to applications
+	4.Allow you to centrally manage,configure,and update a large number
+  	  of vms
+	5.Build large-scale services for areas such as compute,bigdata,and container
+	  workloads
+Elasticity
+	1.Handles high volumes of traffic
+	2.Covers ability to scale up and down
+	3.Use less resources when needed
+	4.Keeps users happy
+	5.Saves money
+	6.Avoids over-provisioning
+	7.Avoids under-provisionning
+AutoScaling in Azure
+	1.Have the right amount of resources running to handle the load
+	  on your application
+	2.Add resources to handle increases in load
+	3.Removes resources that are sitting idle
+	4.Speify a minimum and maximum number of instances to run
+	5.Add or remove vms automatically based on a set of rules
+	6.When rule conditions are met,autoscale actions are triggered
+Agility
+	1.value=Agility+Utilization
+	2.The ability to provision and de-provision nearly unlimited	
+	3.Resources as n.eeded with complete control
+	4.Singniicant cost advantages and even greater value in the ability
+	  to quickly solve business problems
+	5.Business can move fast when they need to
+	6.Projects can be conceived,provisione,and deployed within
+	  24 hours
+	7.Cloud allows real-time planning and execution
+Fault tolerance
+	1.The same(conceptually)as in private or hosted enviornments
+	2.Ability to continue providing service to underlying applications
+	  even after the failure of one or more components
+Availability sets in Azure
+	1.A logical grouping capability
+	2.Distributes vm availability across multiple physical servers,
+	 compute racks,storage units,and network switches
+	3.If a hardware or azure software failure occurs,only a subset of 
+	  your vms are impacted
+	4.Essential to building reliable cloud solutions
+Disaster recovery
+	1.focuses on recovering from a catastrophic loss of
+	  application functionality
+	2.Business must determine how much functionality is required during a
+   	  disaster
+	Disaster recover types
+		a.Completely unavailable
+		b.partially available
+		c.fully available
+Azure site recovery service
+	1.ensure continuity by keeping business apps and workloads running
+	  during outages
+	2.Replicates workloads on physical and virtual machines(VMs) from
+	  a primary site to a secondary location
+	3.when an outage occurs at primary site,fail over to secondary location
+	4.After the primary location is running again,fail back to it
+CAPEX VS OPEX
+CAPEX
+	1.Money a company spends towards fixed assests sometimes knows as
+	  PP&E -Property,Plant,OR Equipment one-time purchases
+OpEx
+	1.Funds used to Run Day-to-Day Business
+	2.Generally used up within the year they are purchased
+	3.Includes consumables such as printer cartridges,paper,and electricity
+	4.items such as yearly service or maintaince agreements,web site hosting
+	  and web domain registrations
+Infrastructure as a service
+	1.Instant computing infrastructure
+	2.Provisioned and managed over the internet
+	3.Scale up and down with demand
+	4.Pay only for what resources you use
+Common IAAS Scenarios
+	1.Test and Development
+	2.website hosting
+	3.Storage,backup,and recovery
+	4.Web apps
+	5.High-performance computing
+	6.Big data analysis
+	Advantages
+		a.Eliminates capital expense and reduces ongoing cost
+		b.improve business continuity and disaster recovery
+		c.Innovate rapidly
+		d.respond quicker to shifting business conditions
+		e.focus on your core business
+		f.increase stability,reliability and supportability better 
+		  security
+		g.Gets new apps to user faster
+	When to Use IaaS
+		1.you are a startup or a small company
+		2.Large organization looking to only purchase what is 
+		  actually consumed or needed
+		3.Rapidly growing companies
+Platform-as-a-Service(PaaS)
+	
+
+					
+			
+		
+
+
+
+
+
+
+
+	

@@ -1,0 +1,8 @@
+Let's Talk Security
+	1.Plain data in Azure SQL Server,plain SQL connection string
+	2.Plain Azure Redis Cache connection string
+	3.Contact picutres stored in Azure blob storage are encrytpted
+	  however,we prefer to bring and manage our own keys
+	4.Insecure communication via HTTP for custom domain names
+	5.Insecure communication via HTTP for custom domain names
+	

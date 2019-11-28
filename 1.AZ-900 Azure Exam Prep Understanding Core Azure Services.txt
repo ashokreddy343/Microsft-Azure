@@ -1,0 +1,67 @@
+Azure Regions
+	1.set of dataceneters deployed within a latency-defined perimeter
+	2.Connected through a dedicated regional low-latency network
+	3.generally available in 42 regions around the world
+	4.pland announced for 12 additional regions
+Paired Regions
+	1.Each region is paired with another region within same geography
+	2.Azure will serilize platform updates(planned maintenance) so that only
+	  one paired region will be updated at a time
+	3.at least one region in each pair will be prioritized for recovery
+Azure Availability Zones
+	1.protects applications and data from datacenter failures
+	2.unique physical location within an azure region
+	3.independent power,cooling,and network
+	4.minimum of three separate zones in all enabled regions
+	5.physical separation protects against datacenter failures
+	6.99.99% VM uptime SLA
+	7.combination of a fault domain and an update domain
+Azure Resource Groups
+	1.holds rleated resources for an azure solution
+	2.all resources should share the same lifecycle
+	3.each resource can only exist in one resource group
+	4.can add or remove resources at any time
+	5.can move resources from one group to another
+	6.can contain resources residing in different regions
+	7.used to scope access control
+	8.resources can interact with other resource groups
+Resource Manager Termionology
+	Resource
+	Resource Group
+	Resource Provider
+	Resource Manager Template
+	Declarative Syntax
+Azure Products Available for compute
+	Azure Virtual Machines
+		a.an on-demand,scalable computing resource
+		b.flexibility of virtualization without having to buy and maintain
+		  physical hardware
+		c.still need to maintain the VM
+	Virtual machine consdierations
+		a.VM Naming
+		b.Location of VMS
+		c.Size of vms
+		d.Number of vms needed
+		e.Operating system
+		f.Configuration
+		g.Related resources
+	Virtual machine scale sets
+		a.Create and manage a group of identical,load balanced vms
+		b.number of VM instances can automatically increase or decrease
+		c.provide high availability
+		d.applications typically distributed across multiple instances
+		e.provide management capabilities
+	Azure app Service
+		a.build and host web apps,mobile back ends,and Restful APIs
+		b.offers auto-scaling and high availability
+		c.supports both windows and linux
+		d.enables automated deployments
+	High-Productivity Development
+		a.quickly build powerful web,mobile,and API apps
+	Fully Managed Platform
+		a.RUn and scale applications on windows or linux
+		b.Maintenance,load balanceing,etc managed by platform
+	Enterprise-Fade applications
+		a.connect web or mobile apps to enterprise systems or SaaS in minutes
+	
+

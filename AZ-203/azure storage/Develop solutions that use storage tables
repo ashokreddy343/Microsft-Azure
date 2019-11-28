@@ -1,0 +1,61 @@
+https://www.mssqltips.com/sqlservertip/6012/study-material-for-exam-az203-developing-solutions-for-microsoft-azure/
+
+1.Azure Table storage is a service that stores structured NoSQL data 
+  in the cloud, providing a key/attribute store with a schemaless design.
+2.Because Table storage is schemaless, it's easy to adapt your data as 
+  the needs of your application evolve.
+3.Access to Table storage data is fast and cost-effective for many types 
+  of applications, and is typically lower in cost than traditional SQL for similar volumes of data.
+
+What is Table storage
+	1.Azure Table storage stores large amounts of structured data. 
+	2.Azure tables are ideal for storing structured, non-relational data.
+	Common uses of Table storage include
+		a.Storing TBs of structured data capable of serving web scale applications
+		b.Storing datasets that don't require complex joins, foreign keys, 
+		  or stored procedures and can be denormalized for fast access
+		c.Quickly querying data using a clustered index
+		d.Accessing data using the OData protocol and LINQ queries 
+		  with WCF Data Service .NET Libraries
+Table storage concepts
+	storage account
+	Table
+	Entity
+Table
+	1.A table is a collection of entities
+	2.Tables don't enforce a schema on entities, 
+	  which means a single table can contain entities 
+	  that have different sets of properties	
+Entity
+	1.An entity is a set of properties, similar to a database row
+	2.An entity in Azure Storage can be up to 1MB in size.
+	3.An entity in Azure Cosmos DB can be up to 2MB in size.
+
+Properties
+	1.A property is a name-value pair
+	2.Each entity can include up to 252 properties to store data
+	3.Each entity also has three system properties that specify 
+	  a partition key, a row key, and a timestamp.
+az storage table policy
+	az storage table policy create
+		Create a stored access policy on the containing object
+	az storage table policy delete
+		Delete a stored access policy on a containing object
+	az storage table policy list
+		List stored access policies on a containing object
+	az storage table policy show
+		Show a stored access policy on a containing object.
+	az storage table policy update
+		Set a stored access policy on a containing object.
+https://docs.microsoft.com/en-us/cli/azure/storage/table?view=azure-cli-latest
+
+When to use Azure tables
+	1.These are some typical use case scenarios for using Azure tables.
+	2.Azure tables are optimized for capacity and performance (scale)
+Azure Tables:When Appropriate
+	1.SQL Database is limited currently to 150 GB without federation
+	2.Federation can be used to increase the size beyond 150 GB.
+	3.You can think of Azure tables as nothing more than a collection of objects
+https://www.troyhunt.com/working-with-154-million-records-on/
+
+

@@ -1,0 +1,13 @@
+Enabling third party Credentials for your web and mobile apps
+Authorization Endpoints
+	Azure Active Directory
+		-/.auth/login/aad
+	Microsoft Account
+		-/.auth/login/microsoftaccount
+	Facebook
+		-/.auth/login/facebook
+	Google
+		-/.auth/login/google
+	Twitter
+		-/.auth/login/twitter
+		

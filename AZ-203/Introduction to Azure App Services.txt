@@ -1,0 +1,60 @@
+Microsoft Azure
+	1.Ease of use
+	2.Scalability
+	3.Pay for what you use
+Azure App Service Overview
+	it's under PaaS
+	1.Azure service Fabric will taker care of hosting and maintain the
+	  application
+	2.Different types app serice apps
+		a.Web apps
+		b.Api apps
+		c.Logic Apps
+		d.Mobile Apps
+		e.Function Apps
+Summary
+Hosting web applications with web apps
+Azure app services offers
+	1.web apps
+	2.logic apps
+	3.Mobile apps
+	4.API App
+	5.Funtion Apps
+What are web apps ?
+	Host web applications
+	it will support different types of applications	
+		.net,node.js,python,java,php
+		SLA 99.95%
+		Custom domains
+		Deployment slots
+		Continous deployment
+		Auto scaling
+		Authentication/Authorization
+		Traffice Management
+		Access on-premises data
+Deployment Slots
+	why use deployment slots ?
+		a.confirm in pre-production
+		b.test in production
+		c.Deploy with no downtime
+		d.rever deployments
+	A deployment slot is a full web App
+	Scaling is only possible in production slot
+	Swapping swaps the VIP
+WebJobs
+Why use WebJobs?
+	1.Background Service-as-a-Service
+	2.Reliable
+	3.Can be triggered by outside sources
+	4.Queue,Blob,WebHooks...OR
+	5.Can be triggered manually or scheduled
+	6.Can process triggers in parallel
+	7.Are part of your web app
+About webjobs
+	1.you can deploy a batch job to be a webjob
+	2..exe,.cmd,.bat,.sh,.php,.py,.js,.jar,.ps1
+	3.WebJobs use resources from the web App
+
+	
+	
+	

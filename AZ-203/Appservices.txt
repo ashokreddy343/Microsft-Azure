@@ -1,0 +1,118 @@
+1.Hosting your web application using Azure App Service makes deploying and 
+  managing a web app much easier when compared to managing a physical server
+
+What is Azure App Service?
+	1.Azure App Service is a fully managed web application hosting platform
+	2.This platform as a service (PaaS) offered by Azure allows 
+	  you to focus on designing and building your app while Azure 
+	  takes care of the infrastructure to run and scale your applications.
+Deployment slots
+	1.Using the Azure portal, you can easily add deployment slots to an App Service web app.
+	2.ex:staging,production,dev,testing
+Continuous integration/deployment support
+	1.continuous integration and deployment with Azure DevOps, GitHub, Bitbucket, 
+	  FTP, or a local Git repository on your development machine
+	2.Connect your web app with any of the above sources and App Service
+	  will do the rest for you by automatically syncing your code and any
+	  future changes on the code into the web app.
+Integrated Visual Studio publishing and FTP publishing
+Built-in auto scale support (automatic scale-out based on real-world load)
+Creating a web app
+App Service plans
+	1.A single App Service plan can host an unlimited number of App Service web apps.
+App Service overview
+	1.Azure App Service is an HTTP-based service for hosting web applications, 
+	  REST APIs, and mobile back ends.
+	2.Applications run and scale with ease on both Windows and Linux-based environments.
+	3.it provides security,load balancing,autoscaling,and automated management.
+Why use App Services?
+	1.Multiple languages and frameworks
+	2.DevOps Optimization
+	3.Global scale with high availability
+		a.scale up ,scale out manually or automatically
+	4.Connections to SaaS platforms and on-premises data
+	5.Security and compliance
+	6.Application templates
+	7.Visual Studio integration
+	8.API and mobile featrues
+	9.Serverless code
+Introduction to Azure App Service on Linux
+	Languages
+		Node.js,Java,PHP,Python,.NET Core
+	Deployments
+		FTP,Local Git,GitHub,Bitbucket
+	DevOps
+		1.Staging enviornments
+		2.Azure container registry and DockerHub CI/CD
+	Limitations
+		1.App Service on Linux is only supported with Free, Basic, Standard, 
+	   	  and Premium app service plans and does not have a Shared tier. 
+		2.You cannot create a Linux Web App in an App Service plan already hosting non-Linux Web Apps.
+		3.Based on a current for the same resource group you cannot mix Windows and 
+		  Linux apps in the same region.
+Create an ASP.NET Core app in App Service on Linux
+	create the app locally
+		1.mkdir hellodotnetcore
+		2.cd hellodotnetcore
+		3.dotnet new web
+		4.dotnet run
+		5.git init
+		6.git add .
+		7.git commit -m "first commit"
+	Use Azure cloud shell
+	Configure a deployment user
+		az webapp deployment user set --user-name <username> --pasword <password>
+	Create a resource group
+		1.az group create --name myResourceGroup --location "West Europe"
+	Create an Azure App Service plan
+		az appservice plan create --name myAppservicePlan --resource-group myResourceGroup --sku B1 --is-linux
+	Create a web app
+		az webapp create --resource-group myResourceGroup --plan myAppServicePlan 
+		  --name <app-name> --runtime "DOTNETCORE|2.2" --deployment-local-git
+	clean up resources
+		az group delete --name myResourceGroup
+Azure App Service plan overview
+	1.One or more apps can be configured to run on the same 
+	  computing resources (or in the same App Service plan).
+	Each App service plan defines
+		a.Region (West US,East US,etc)
+		b.Number of VM instances
+		c.Size of VM instances (Small, Medium, Large)
+		d.Pricing tier (Free, Shared, Basic, Standard, Premium, PremiumV2, Isolated)
+	Shared compute
+		1.Free and Shared, the two base tiers, runs an app on the same 
+	 	  Azure VM as other App Service apps, including apps of other customers
+		2.These tiers allocate CPU quotas to each app that runs on the shared resources, 
+		   and the resources cannot scale out.
+		3.These tiers are intended to be used only for development and testing purposes.
+	Dedicated compute
+		1.The Basic, Standard, Premium, and PremiumV2 tiers run apps on dedicated Azure VMs.
+		2.Only apps in the same App Service plan share the same compute resources.
+		3.The higher the tier, the more VM instances are available to you for scale-out.
+	Isolated
+		1.This tier runs dedicated Azure VMs on dedicated Azure Virtual Networks
+		2.It provides network isolation on top of compute isolation to your apps
+		3.It provides the maximum scale-out capabilities.
+	Each tier also provides a specific subset of App Service features.
+		a.custom domains
+		b.SSL certificates
+		c.autoscaling
+		d.deployment slots
+		e.backups
+		f.Traffic Manager integration
+How does my app run and scale?
+How much does my App Service plan cost?
+	1.the App Service plan has an hourly charge.
+	2.If you integrate App Service with another Azure service, 
+	  you may need to consider charges from these other services. 		
+	3.For example, if you use Azure Traffic Manager to scale your app 
+	  geographically, Azure Traffic Manager also charges you based on your usage
+What if my app needs more capabilities or features?
+Should I put an app in a new plan or an existing plan?
+	1.You can continue to add apps to an existing plan as long as the plan
+	   has enough resources to handle the load.	
+https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans?toc=%2fazure%2fapp-service%2fcontainers%2ftoc.json
+https://docs.microsoft.com/en-us/azure/app-service/environment/intro
+		
+		
+	

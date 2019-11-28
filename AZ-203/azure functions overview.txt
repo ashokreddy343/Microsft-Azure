@@ -1,0 +1,50 @@
+1.Azure Functions is a solution for easily running small pieces of 
+  code, or "functions," in the cloud. 
+2.Azure Functions lets you develop serverless applications on Microsoft Azure
+Features
+	1.Choice of language
+	2.Pay-per-use-pricing model
+	3.Bring your own dependencies
+	4.Integrated security
+		a.Protect HTTP-triggered functions with OAuth providers 
+	 	  such as Azure Active Directory, Facebook, Google, Twitter, 
+		  and Microsoft Account.
+	5.Simplified integration
+	6.Flexible development
+What can i do with functions?
+	1.It is a great for processing data,integrating systems,working with the IOT
+	  and building simple APIs and microservices
+Function provides different types of templates
+	1.HTTPTrigger
+	2.TimeTrigger
+	3.CosmosDBTrigger
+	4.BlobTrigger
+	5.QueueTrigger
+	6.EventGridTrigger
+	7.EventHubTrigger	
+	8.ServiceBusQueueTrigger 
+	9.ServiceBusTopicTrigger
+Integrations 
+	1.Azure Functions integrates with various Azure and 3rd-party services.
+The following service integrations are supported by Azure Functions:
+	1.Azure Cosmos DB
+	2.Azure Event HUB
+	3.Azure Event Grid
+	4.Azure Notification Hubs
+	5.Azure Service Bus(queues and topics)
+	6.Azuure Storage(blob,queues,and tables)
+	7.On-premises(using service bus)
+	8.Twilio(SMS messages)
+How much does Function cost ?
+	Azure Functions has two kinds of pricing plans.
+	1.Consumption plan
+		a.When your function runs, Azure provides all of the 
+		  necessary computational resources. 
+		b.You don't have to worry about resource management, 
+		   and you only pay for the time that your code runs.
+	2.App Service plan
+		a.Run your functions just like your web apps
+		b.When you are already using App Service for your other applications,
+		  you can run your functions on the same plan at no additional cost.
+
+	

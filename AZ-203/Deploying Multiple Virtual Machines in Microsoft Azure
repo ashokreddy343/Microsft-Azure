@@ -1,0 +1,16 @@
+Generalize a vm in azure
+	Pubrpose of Generalization
+	1.Resets server-specific data
+		-computer name
+		-Security identifiers(SIDs)
+		-Local Administrator/root identity
+		-Device driver cache
+		-Event logs
+	2.Take a VM backup first,because generalization is destructive and permanent
+	Managed Disks
+		Disks
+			a.No storage(management) required
+			b.Pay for pre-allocated storage(P10=128 GB SSD VHD)
+			
+		Snapshots
+			

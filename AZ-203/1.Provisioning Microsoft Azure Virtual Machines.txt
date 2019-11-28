@@ -1,0 +1,101 @@
+Accounts,SUbscritions and Resources in Azure
+	Cloud-based Services
+	Account
+	Subscription
+	Resources
+Azure Account
+	1.your access into Microsoft Azure
+	2.Uniquely identifies you in Azure
+	3.Security policy
+	4.Subscription access 
+Azure Subscription
+	1.Subscription grant you access to Microsoft 
+	  Azure resources
+	2.you can have serveral subscriptions associated with
+	  an account
+	3.Types of Azure subscriptions
+	 	a.Azure free account
+		b.Pay-As-You-Go
+		c.Visual Studio
+		d.Enterprise Aggreements
+Azure Resources
+	1.Manageable item that is available in Azure
+		Virtual machine
+		Networking
+		Database
+	2.Resources are assigned to a subscription
+Resource Manager
+	1.Resource Groups elements of a solution
+	2.Build deployments
+	3.Consistent management layer and tooling
+Placing Resources in Azure Regions
+	1.A region is a set of data centers deployed 
+	  within a latency-define perimeter
+	2.Many Regions to choose from
+Availability Zones
+	1.Physically Separate
+	2.Redundant and independant
+	3.Mission Critical,low latency
+Placing Resources in Regions and Availabity Zones
+	1.Services Availability
+	2.Redundancy
+	3.Latency
+Azure services and compute
+	Azure Compute
+		-IaaS
+		-Virtual machines
+			a.Scalable compute resource in Azure
+		-you get to consume the VM and the operating system with it
+Why use a Virtual Machine ?
+	1.Patching
+	2.Version Control
+	3.Instrumentation
+	4.Security/Compliance
+Virtual Machine Components
+	1.Image
+	2.Network
+	3.Storage
+Before Creating a VM
+	1.Create a Resource Group
+	2.Create a Virtual Network
+	3.Use Managed Storage
+connect to vm
+Programmatically interacting with azure
+	1.Adding consistency to your deployments and VM creation
+	2.Any production system should be implemented using automation
+	3.Also useful to cosntruct similar downlevel enviornment,such as DEV/TEST
+	tools
+		Azure clis
+		powershell
+		cloudshell
+	Getting Azure CLI
+		1.Windows MSI Installer
+		2.macOS brew package
+		3.Linux
+			a.Available from package managers from apt,yum
+			  and zypper
+			b.Windows Services for Linux(WSL)
+		4.Docker container is available
+	PowerShell
+		1.Azure resources can be controlled with cmdlets
+		2.Windows Powershell
+			a.Windows only,included with the os
+		3.Powershell core
+			a.Cross platform,windows,Linux,macOS and container image
+			  available
+	Getting windows powershell
+		1.windows management Framework 5.1		
+		2.Insall-Module AzureRm
+	CloudShell
+		1.Interactive,browser accessible shell for managing your azure resources
+		2.you get bash,powershell and azure cli
+		3.you don't have to install or confiugre or maintain your shell enviornment
+		4.it's already logged into your azure account when you launch
+	Creatinv a VM Programmatically
+Creating VM Using Azure CLI and Powershell
+
+
+
+
+
+				

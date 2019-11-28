@@ -1,0 +1,55 @@
+1.Azure Resource Manager is the deployment and management service for Azure
+Consistent management layer
+	1.When a user sends a request from any of the Azure tools, APIs, or SDKs, 
+	  Resource Manager receives the request.
+	2.Resource Manager sends the request to the Azure service, which takes the requested action.
+resource
+	1.a manageable item that is available through azure.
+	2.Ex:Virtual machine,storage
+resource group
+	1.A container that holds related resources for an Azure solution.
+resource provider
+	1.A service that supplies Azure resources
+	2.For example, a common resource provider is Microsoft.Compute
+resource manager template
+	1.A JavaScript Object Notation (JSON) file that defines one or 
+	  more resources to deploy to a resource group or subscription
+Understand scope
+	1.Management groups
+	2.Subscriptions
+	3.Resource groups
+	4.Resources
+Resource group important points
+	1.Each resource can only exist in one resource group.
+	2.You can add or remove a resource to a resource group at any time.
+	3.You can move a resource from one resource group to another group
+Why does a resource group need a location
+	1.The resource group stores metadata about the resources. 
+	2.When you specify a location for the resource group,
+	  you're specifying where that metadata is stored.
+	3.For compliance reasons, you may need to ensure that 
+	  your data is stored in a particular region.
+Azure Resource Manager templates
+Why choose Resource Manager templates?
+	1.Declarative syntax
+	2.Repeatable results
+	3.Orchestration
+Template file 
+	Parameters
+		1.Provide values during deployment that allow the same template 
+		  to be used with different environments.
+	Variables
+		1.Define values that are reused in your templates
+		2.They can be constructed from parameter values
+	User-defined functions
+		1.Create customized functions that simplify your template
+	Resources
+		1.Specify the resources to deploy
+	Outputs
+		1.Return values from the deployed resources	
+Template deployment process
+for custom template we can download through the following url
+https://azure.microsoft.com/en-us/resources/templates/
+				
+
+

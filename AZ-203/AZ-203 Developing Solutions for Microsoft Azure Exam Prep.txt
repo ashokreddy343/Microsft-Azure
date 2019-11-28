@@ -1,0 +1,107 @@
+What you require to learn
+	azure cli,azure sdk,visual stuido 2019
+	https://github.com/Azure-Samples/
+	https://azurecitadel.com/
+	https://www.microsoft.com/handsonlabs 	
+Why is Cloud Computing Cool?
+Amazing Microsoft Resources
+	https://azure.microsoft.com/en-us/resources/samples/?sort=0
+	https://azurecitadel.github.io/labs/
+	https://docs.microsoft.com/en-us/azure/
+	https://www.youtube.com/user/windowsazure
+	https://www.youtube.com/channel/UCsMica-v34Irf9KVTh6xx-g
+	https://docs.microsoft.com/en-us/rest/api/?view=Azure
+Hands On Labs for AZ-203
+	https://microsoftlearning.github.io/AZ-203-DevelopingSolutionsforMicrosoftAzure/
+Section 2: New Az-203 Virtual Machines
+Create your First VM
+	subscription :Visual Studio Professional
+	Resource group :a resource group is a collection of resources that share the same life
+			cycle,permissions,and policies
+	Instance details
+		Virtual machine name:az203vm
+		Region
+		Availability options
+			a.No ifrastructure redundancy required
+			b.Availability Zone
+			c.Availability set
+		Image:Windows Server 2016 Dataceneter
+		Size
+		username
+		password	
+		confirm password
+	Inbound port roles
+		public inbound ports 
+			HTTP-80
+			HTTPS-443
+			SSH-22
+			RDP-3389
+	Disks
+		1.Standard HDD
+		2.Standard SSD
+		3.Premium SSD
+	Data disks
+		1.This VM also comes with a temporary disk.
+	Network interface
+		Virtual network
+		subnet	
+		public IP
+	Load balancing
+	Management
+		Monitoring
+			Boot diagnostics
+			OS guest diagnostics
+		Identity
+		Auto-shutdown
+		Backup	
+Encrypt a VM
+	1.Create a KeyVault
+		create a key
+	2.Both keyvault and vm location should be same
+ $KVRGname = 'MyKeyVaultResourceGroup';
+ $VMRGName = 'MyVirtualMachineResourceGroup';
+ $vmName = 'MySecureVM';
+ $KeyVaultName = 'MySecureVault';
+ $KeyVault = Get-AzKeyVault -VaultName $KeyVaultName -ResourceGroupName $KVRGname;
+ $diskEncryptionKeyVaultUrl = $KeyVault.VaultUri;
+ $KeyVaultResourceId = $KeyVault.ResourceId;
+
+Set-AzVMDiskEncryptionExtension -ResourceGroupName $VMRGname -VMName $vmName -DiskEncryptionKeyVaultUrl $diskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId;
+
+Azure Virtual Machine Quiz
+	What is a Virtual Machine?
+		1.A service that cloud providers offer that falls under the category of IaaS.
+		2.it is a portion of machine that is running in an azure data center that you
+		  can control
+		3.you don't actually control of the physical machine,but it looks and acts like
+		  a server that you can control
+		4.it suports windows or linux operating systems.
+		5.you can remote into it,install any software you wish,and you only need to pay
+		  for it for the time that you use it
+	
+	What is a benefit of using ARM Templates?
+		1.You can create resources by using JSON templates and by passing parameters. 
+		2.In this way, you can automate resource creation and implement
+		  Desired State Configuration. 
+	 	3.This lets you control how your environment looks and prevents 
+		  developers or ops from changing it accidentally.
+Which of the following is a prerequisite for encrypting the operating system disk of a virtual machine?
+	1.you must have an encryption key inside an Azure key vault
+If you are unable to connect from your computer to a Windows VM by RDP, what is the first thing you should check?
+	1.Check to see if port 3389 is open on the network security group
+ 
+What is the default VM size that Azure wants to use when you create a VM?
+	Standard DS1
+
+Section 3:New Az-203 Azure Batch Service
+Section 4:Create Azure kubernetes Services(AKS) cluster
+	Create AKS Cluster
+		
+Section 5:New Az-203 Azure App Services
+		
+
+
+
+	
+		
+				

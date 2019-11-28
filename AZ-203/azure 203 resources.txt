@@ -1,0 +1,20 @@
+https://www.mssqltips.com/sqlservertip/6012/study-material-for-exam-az203-developing-solutions-for-microsoft-azure/
+Books
+	1.Exam Ref AZ-203 Developing Solutions for Microsoft Azure 1st Edition
+	2.Kubernetes Cookbook: Building Cloud Native Applications 1st Edition
+	3.Quick and Practical Guide to ARM Templates: Become Experts in Developing 
+	  ARM Templates for Azure without any prior knowledge
+	4.Azure Automation Using the ARM Model: An In-Depth Guide to Automation with Azure Resource Manager
+	5.Azure Resource Manager Templates Quick Start Guide: Create, deploy, and manage Azure 
+	  resources with ARM templates using best practices 
+	6.Practical Microsoft Azure IaaS: Migrating and Building Scalable and Secure Cloud Solutions
+	7.Hands-On Azure for Developers: Implement rich Azure PaaS ecosystems using containers, 
+	  serverless services, and storage solutions
+	8.Modern Authentication with Azure Active Directory for Web Applications (Developer Reference)
+	9.Mastering Identity and Access Management with Microsoft Azure
+	10.Getting Started with OAuth 2.0: Programming Clients for Secure Web API Authorization and Authentication
+	11.Hands-On Azure for Developers: Implement rich Azure PaaS ecosystems using containers,
+	   serverless services, and storage solutions
+https://buildazure.com/az-203-developing-solutions-for-microsoft-azure-certification-exam/
+https://www.whizlabs.com/blog/az-203-exam-preparation/
+https://devblogs.microsoft.com/premier-developer/az-203-developing-solutions-for-microsoft-azure-study-guide/
